@@ -1,0 +1,4618 @@
+%% config
+\def\home{../../styles}
+
+%% documentclass
+\input{\home/documentclass_normal_oneside}
+
+%% generell-styling
+\input{\home/style_proggen}
+
+%% meta-tags for pdf
+\newcommand{\pdfauthor}{Matthias Günther}
+\newcommand{\pdftitle}{Scrum}
+\newcommand{\pdfsubject}{Aufzeichnungen zur Fortbildung}
+\newcommand{\pdfkeywords}{ruby}
+\newcommand{\motto}{git works and work and works ...}
+\newcommand{\tutor}{}
+\newcommand{\disclaimer}{(Die Autoren übernehmen keine Garantie und Haftung
+für die Korrektheit des Skriptes. Das Skript ist unter den Namen von Matthias
+Günther veröffentlicht.)}
+\newcommand{\publisher}{Der Helex-Matze Verlag $\sum\limits_{i=1}^{n}i$}
+\newcommand{\pdfemail}{matthias.guenther@wikimatze.de}
+\newcommand{\correctiontext}{Kommentare/Korrekturen an}
+\newcommand{\homepagetext}{Homepage}
+\newcommand{\homepage}{wikimatze.de}
+\newcommand{\coverdisclaimer}{Copyright Skript-Covers}
+\newcommand{\covercopyright}{\textsc{Ubisoft} (\url{ubi.com})}
+
+%% fancy-header
+\input{\home/style_header_oneside}
+
+%% setting the infos for the pdf
+\input{\home/info_hypersetup}
+
+%% environments
+\input{\home/environments_normal}
+\input{\home/environments_mathe}
+
+%% cover
+\input{\home/style_cover}
+
+\begin{document}
+\input{\home/style_starting_document_without_cover}
+
+
+\section{Scrum}
+\subsection{Fakten}
+\textbf{Essentials}: Das Team \textit{organisiert sich selbst}, macht einen
+\textit{realistischen Plan}, koordiniert den \textit{täglichen Fortschritt} und \textit{löst
+  Probleme} und macht das alles in einem \textit{wiederkehrenden Zyklus}.
+
+
+\subsubsection{Probleme der Softwareentwicklung}
+\begin{itemize}
+  \item Auslieferung und Produktivnahmen dauern zu lange
+  \item Stabilisierung dauert zu lange
+  \item Änderungen sind schwer einzubringen
+  \item Qualität $\downarrow$ und Moral durch Todesmärsche $\downarrow$
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \scalebox{0.9}{{\input{stacy_landscape.pdftex_t}}}
+  \caption{Stacy Landscape Model: Complicated (Ursache Wirkung klar), Complex (Hinterher ist man
+    immer schlauer; Effektivität wichtiger als Effizienz)}
+  \label{fig:1}
+\end{figure}
+
+
+\subsubsection{Was ist Scrum}
+\begin{itemize}
+  \item ist ein Management-Framework für inkrementelle Produktentwicklung unter Verwendung von einem
+    oder mehreren cross-funktionalen, selbstorg. Team.
+    Es ist für adaptive komplexe Probleme geeignet, während die Produktivität und
+    Kreativität Produkte mit höchst-möglichen Nutzen ausliefert
+  \item gibt Rollen, Meetings und Artefakte vor
+  \item Scrum hat fixe Iterationen (zwei Wochen oder \textbf{max 30 Tage}), in denen versucht wird ein
+    potentiell auslieferbares Produktinkrement zu erstellen
+  \item ist ein empirischer\footnote{Empiricism asserts that knowledge comes from experience and
+    making decisions based on what is known. Three pillars uphold every implementation of
+    empirical process control: \textbf{transparency} (Scrum Artefakte für alle sichbtar),
+    \textbf{inspection} (Scrum Artefakte checken und den Fortschritt zum
+    Sprint-Ziel checken), und \textbf{adaptation} (wenn ein oder
+    mehrere Aspekte vom akzeptierbaren Maß abweichen, dann ist das herauskommende Produkt
+    nicht mehr akzeptable, Prozess oder zu bearbeitende Material muss schnell angepasst werden, damit weitere
+    Abweichung minimiert wird)}. Prozess, da in der heutigen Zeit die Anforderungen und die Technologie
+    $\uparrow$ d.h. es ist zu kompliziert für einen vorhersehbaren Ausgang
+  \item \textit{Inspect} und \textit{adapt} wird durch Sprint Planning, Daily Scrum, Sprint Review und Retro
+    (sind Scrum Events) abgedeckt
+\end{itemize}
+
+
+\subsubsection{Essens von Scrum}
+\begin{itemize}
+  \item Team erhält klare vorgegebene Ziele
+  \item Team organisiert sich um die Arbeit selbst
+  \item Team liefert regelmäßig wertvolle Funktionalitäten
+  \item Team erhält Feedback von der Außenwelt
+  \item Team reflektiert seine Arbeitsweisen, um sich zu verbessern
+  \item Team und Management kommunizieren ehrlich über den Fortschritt und Risiken
+  \item sobald man vom Scrum-Weg abweicht, dann muss man sich bewusst sein, was das für
+    Auswirkungen hat und das dann einige Sachen von Scrum nicht mehr funktionieren
+\end{itemize}
+
+
+\subsubsection{Scrum Werte und Umsetzung (Prinzipien)}
+\ulbfab{Scrum Werte}
+
+\begin{Beschreibungfett}[Selbstverplfichtung]
+  \item [Fokus] eine Aufgabe lösen, d.h. arbeiten gut zusammen und erzeugen exzellente Arbeit
+    $\Rightarrow$  liefern früher wertvolle Ergebnisse
+\item [Mut] haben mehr Ressourcen, da wir uns in einer Gruppe unterstützen und haben dadurch Mut,
+  größere Herausforderungen anzugehen (wir lernen aus Fehlern \footnote{höher Leute in der Hierarchie muss es vorleben, dass man
+    Fehler gemacht werden (man darf auch welche machen)})
+\item [Offenheit] wir   besprechen wie wir vorgehen und was uns im Weg steht, wir äußern
+  Bedenken, so dass diese adressiert werden können $\Rightarrow$ schafft
+Vertrauensbasis\footnote{besser als streng auf den Vertrag zu gucken}
+  \item [Selbstverplfichtung] haben Kontrolle über unser eigenes Schicksal und dadurch wächst
+    unsere Selbstverpflichtung zum Erfolg
+    herauskommen; wir denken, dass wir es schaffen.
+  \item [Respekt] wenn wir zusammenarbeiten und Erfolge und Misserfolge teilen, dann
+    respektieren wir uns gegenseitig und helfen einander\footnote{menschlicher Umgang $\Rightarrow$
+    kann man gut im Teamvertrag regeln}
+\end{Beschreibungfett}
+
+
+\ulbfab{Prinzipien}
+
+
+\begin{enumerate}
+  \item \textbf{empirisches Management}: wird durch \textit{transparancy, inspect \&
+      adapt}\footnote{Kleine Zyklen und gucken dann, wo ich bin $\Rightarrow$ ist ein sehr wichtiges
+    Element, um auf Dauer auf Veränderungen reagieren zu können.} umgesetzt
+\item \textbf{autonomes}, \textbf{selbstorganisiertes}\footnote{wählen aus, wie sie am besten ihre Arbeit umsetzen,
+    als sich von außen Befehle geben zu lassen}, \textbf{Cross-funktionales} Team
+  \item \textbf{ROI-Fokus}: stiften am Sprint-Ende einen Kundennutzen (\textit{Value-based Priorisation})
+  \item \textbf{timeboxing}: alle Schritte im Prozess sind zeitlich beschränkt und müssen bis dahin
+    auch fertig sein, \uline{z.B.}
+    Sprintlänge, Retro usw. man soll sich die Zeit nehmen und die wichtigsten Termine
+    durchgehen und erst dann einen Prozess abschaffen/ändern, wenn man Ihn wenigstens
+    ausprobiert hat.
+  \item \textbf{Pull Prinzip}\footnote{nicht überlasten und arbeite von oben nach unten durch
+      (Akzeptierte Verantwortung aus XP)}: Verantwortungsübernahme, d.h. \enquote{Nimm dir eine Sache, die du
+      auch erledigen kannst} $\Rightarrow$ Verantwortung kann man nicht aufdrücken, wenn man sich nicht verantwortlich dafür fühlt.
+  \item \textbf{Potentiell auslieferbare Produktinkrement}
+\end{enumerate}
+
+
+\subsubsection{Warum schweigt Scrum über Softwareentwicklungs-Praktiken?}
+\begin{itemize}
+  \item Scrum erwartet von Teams, dass sie alle erforderliche tun, um das gewünschte Produkt zu
+    liefern $\Rightarrow$ es ermächtigt die Teams dazu
+  \item Entwicklungspraktiken und Werkzeuge sind ständigen $\Delta$ unterworfen
+\end{itemize}
+
+
+\subsubsection{Selbstorganisation}
+\begin{itemize}
+  \item selbstorg. Teams sind hoch diszipliniert\footnote{eines hohes Maß an Vertrauen und hohe
+      Verbindlichkeit sind automatische Resultate von wirklich selbstorg. Teams } ($\Rightarrow$ Grundlage für \textit{hyperproduktive} Teams)
+  \item erhalten volle Autonomie und tragen damit eine höhere Verantwortung für die
+    Übereinstimmung der Lieferung mit ihren eigenen Versprechen.
+  \item ermutigt, absehbare Risiken einzugehen und durch Fehlschläge und
+    Selbstreflexion zu lernen
+  \item \textbf{Fragen zur Selbtsorg.}:
+    \begin{itemize}
+      \item Pflichtmeeting
+      \item IT-Update/Review
+      \item \textbf{Community of Practice} (CoP)
+      \item zu viele Abhängigkeiten
+      \item Prioritäten Wechsel ohne Begründung
+      \item Projektleitung vs. Verantwortlichkeit
+      \item Technische Limitierung (Betriebssystem)
+      \item hohe Selbstorg. vs. \textit{Command \& Conquor} $\Rightarrow$ Transparenz schaffen
+    \item Gewohnheiten vs. Hinterfragen
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Manifesto der Agilen Softwareentwicklung}
+Wir entdecken bessere Wege, Software zu entwickeln, indem wir es tun und anderen dabei helfen, es zu tun. Durch diese Arbeit schätzen wir:
+
+
+\begin{itemize}
+  \item \textbf{Individual and interactions} over processes and tools
+  \item \textbf{Working software} over comprehensive documentation
+  \item \textbf{Customer collaboration} over contract negotiation
+  \item \textbf{Responding to change} over following plan
+\end{itemize}
+
+
+$\Rightarrow$ während wir den Wert der Dinge auf der rechten Seite sehen, schätzen wir die
+Dinge auf der linken Seite als wichtiger ein.
+
+
+\subsection{Prinzipien hinter dem Agilen Manifest}
+\begin{enumerate}
+  \item Unsere höchste Zielsetzung ist es, den Kunden durch die frühe und kontinuierliche
+    Lieferung wertvoller Software zufrieden zu stellen.
+  \item Begrüße Anforderungsänderungen, auch spät in der Entwicklung. Agile Prozesse nutzen den Wandel für den Wettbewerbsvorteil des Kunden.
+  \item Liefere häufig funktionierende Software eher in kürzeren Zeiträumen.
+  \item Geschäftsleute und Entwickler müssen täglich im Projekt zusammen arbeiten.
+  \item Baue Projekte um motivierte Individuen. Gib ihnen die Umgebung und
+    Unterstützung, die sie brauchen, und traue ihnen zu, den Job zu erledigen.
+  \item Die effizienteste und effektivste Art der Informationsweitergabe an und in einem Entwicklungsteam ist die Konversation von Angesicht zu Angesicht.
+  \item Funktionierende Software ist das primäre Maß für Fortschritt.
+  \item Agile Prozesse fördern nachhaltige Entwicklung. Die Sponsoren, Entwickler und
+    Benutzer sollten ein gleichbleibendes Tempo ohne Unterbrechung einhalten
+    können.
+  \item Die fortwährende Beachtung von technischer Exzellenz und gutem Design
+    verbessert die Agilität.
+  \item Einfachheit - die Kunst der Maximierung von nicht angegangener Arbeit - ist essentiell.
+  \item Die besten Architekturen, Anforderungen und Designs entstehen in sich selbst
+    organisierenden Teams.
+  \item In regelmäßigen Intervallen reflektiert das Team darüber, wie es effektiver werden kann,
+    und passt dann dein Verhalten entsprechend an.
+\end{enumerate}
+
+
+\subsection{Rollen}
+\begin{itemize}
+  \item keine Projektleiter-Rolle in Scrum
+  \item Verantwortlichkeiten des traditionellen Projektleiters sind auf die drei Rollen (Product
+    Owner (PO), ScrumMaster (SM), das Entwicklungs-Team) im \textit{Scrum Team} aufgeteilt
+\end{itemize}
+
+
+\subsubsection{Das Scrum Team}
+\begin{itemize}
+  \item besteht aus PO, Entwicklungs-Team und Scrum Master (SM)
+  \item Cross-funktionale Gruppe\footnote{hat alle Fachkräfte, um ein fertiges Produktinkrement am
+      Ende eines Sprints lauffähig zu haben ohne dabei von Personen außerhalb des
+      Entwicklungsteam abhängig zu sein} und selbstorg.
+  \item versucht ein potential auslieferbares Produkt-Inkrement jeden Sprint zu
+    liefern\footnote{ultimative Aufgabe, die Anforderungen des POs im Sprint Backlog in ein potentiel
+    auslieferbares Produktinkrement zu wandeln} und versuchen, Feedback fürs geschafftes zu maximieren
+  \item Teams repräsentieren \textbf{multilearning}\footnote{d.h. jeder hat seine spezielle Stärken, aber es werden
+    auch Aufgaben in Bereichen erledigt, in denen sie nicht so weit bewandert ist}
+  \item verhandelt Commitments zum Sprint mit PO und legen so den \textit{scope} des Sprint Backlogs fest
+  \item Schätzen der Größe von Backlog-Einträgen
+  \item hat Autonomie wie die Commitments erreicht werden
+  \item 7 +- zwei Mitglieder
+  \item Teammitglieder können Entwickler, Tester, Analysten, Architekten, Autoren, Designer und Benutzer sein
+\end{itemize}
+
+
+\subsubsection{Product Owner}
+\ulbf{Metapher:} Product Owner (PO) ist ein \textit{CEO}
+
+\begin{itemize}
+  \item ROI Maximierung\footnote{kann auch erreicht sein, wenn Stakeholder nicht heulen} und für die gemeinsame Produktvision verantwortlich
+  \item Produktbacklog (PB) pflege\footnote{entweder PO oder Entwicklungs-Team kümmern sich darum, aber PO ist dafür \textbf{rechenschaftspflichtig}; Hol- und
+      Bringschuld liegt bei Ihm, das Backlog transparent zu halten}:
+    \begin{itemize}
+      \item klar formulierte Einträge
+      \item ordnet PBI so an, dass sie die Ziele am besten erreichen
+      \item optimiert den Wert der Arbeit, die das Entwickler Team ausführt
+      \item stellt sicher, dass das Produktbacklog sichtbar, transparent und soll darstellen, woran das Scrum-Team als nächstes arbeitet
+    \end{itemize}
+  \item Leute die eine Änderung an der Prio im Backlog haben wollen, sollen sich nur an den PO wenden
+  \item Repriorisiert und verfeinert das Produktbacklog
+  \item finaler Entscheider für Anforderungs-Lösungen
+  \item \textit{akzeptiert oder lehnt} Produktinkrement ab\footnote{entscheidet wann ausgeliefert werden soll
+      und ob die Entwicklung fortgesetzt werden soll; im besten Fall sollte nach jedem Sprint
+      ausgeliefert werden}
+  \item ist ein Person und kein Komitee (\textit{single point of failure})
+  \item ist ein \textit{Anforderungsfilter} für Devs
+  \item bedenkt die Interessen der Stakeholder
+  \item \textit{ist die wichtigste Person im Scrum-Team}, weil er der Grund für die Entstehung des Scrum-Teams ist
+  \item kann als Team Mitglied helfen
+\end{itemize}
+
+
+\subsubsection{Das Entwicklungs-Team}
+\begin{itemize}
+  \item sind Profis, die die Arbeit zur Auslieferung eines potentiell auslieferbaren
+    Inkrements unter der Einhaltung von \enquote{done} liefern können
+  \item sind selbstorg.\footnote{niemand (auch nicht der SM) sagt ihnen, wie sich ein PBI zur
+      Auslieferung fertigstellen sollen} und Mitglieder sollen für das Projekt komplett zur
+    Verfügung stehen
+  \item entscheiden, wie viel Arbeit in einem Sprint passt
+  \item nur das Entwicklungs-Teams dürfen das Produkt-Inkrement erstellen
+  \item Synergien optimieren die Team-Effektivität und Effizienz
+  \item sind \textbf{Cross-funktional}\footnote{funktionsübergreifende Gruppe von Menschen, die
+      zusammen alle erforderlichen Fähigkeiten besitzen, um jedes Produktinkrement zu
+      liefern}
+  \item keine anderen Titel außer Entwickler für Mitglieder des Entwicklungs-Teams zu\footnote{sonst
+      verändern sich die Verantwortlichkeiten}
+  \item Scrum lässt keine Sub-Teams zu (auch nicht durchs Testen, Business Analysts)
+  \item Individuelle Stärken im Team sind vorhanden, aber die Verantwortlichkeit liegt auf dem
+    ganzen Team
+  \item \textbf{Größe}: $<= 3$ und $<= 9$ (PO und SM zählen nicht in diese Rechnung, es sei denn sie
+    arbeiten auch im Sprint mit)\footnote{Team sollte so groß sein, dass es von einer großen Pizza
+      satt wird}
+\end{itemize}
+
+
+\subsubsection{Scrum Master}
+\textbf{Metapher:} Scrum Master (SM) ist ein \textit{Moderator}, \textit{Coach}, \textit{Mentor} und \textit{Bulldozer}!
+
+\begin{itemize}
+  \item ist \textbf{servant-leader}\footnote{eine \textit{dienende Führungsperson}: hört zu, ist empathisch und gibt Einsichten,
+      während er Macht und Authorität im Team teilt} fürs Scrum-Team
+  \item stellt sicher, das Scrum verstanden und durchgeführt wird
+  \item wichtigste Aufgabe: zeige Rollen Ihre Verantwortlichkeiten
+  \item räumt Impediments aus dem Weg\footnote{\textbf{extern}: z.B. fehlende Unterstützung durch
+      anderes Team; \textbf{intern}: wenn PO nicht weißt, wie er das PB richtig vorbereiten soll}
+  \item erleichtert und hält den Scrum Prozess in Bewegung\footnote{macht das alles ohne Management,
+      wobei er eine Management-Rolle für den Scrumprozess hat}
+  \item fördert die Erstellung einer Umgebung zur Selbstorg.
+  \item sammelt empirische Daten, um Vorhersagen besser anzupassen
+  \item beschützt das Team von externen Einflüssen und Ablenkungen/Unterbrechungen, damit das Team im Flow bleibt
+  \item hilft Leuten außerhalb des Scrum-Teams welcher Ihre Interaktionen mit dem Team hilfreich und welche es nicht sind
+  \item achtet auf \textbf{timeboxing}
+  \item hält Scrum-Artefakte sichtbar
+  \item fördert erweiterte Engineering Practices
+  \item hat keine Projekt-Manager Rolle\footnote{jeder mit Autorität übers Team ist per Definition kein SM}
+  \item hilft der Produkt Gruppe beim Scrumlernen und wie man Scrum anwendet, um die
+    Geschäftsziele zu erreichen
+  \item Probleme sollen wann immer möglich vom Team gelöst werden
+  \item \ulbf{unterstützt PO}:
+    \begin{itemize}
+      \item Techniken zum Effektiven PB Management
+      \item Scrum-Team Verständnis geben, warum PBIs klar und genau sein müssen
+      \item verstehen, das Produkt Planung ein empirischer Prozess ist
+      \item sicherstellen, das PO weiß, wie man das PB mit maximalen Nutzen angeordnet sein soll
+      \item agile Praktiken verstehen und anwenden
+      \item teilnehmen an Scrum-Events, sofern es notwendig ist
+    \end{itemize}
+  \item \ulbf{unterstützt Entwicklungs-Team}:
+    \begin{itemize}
+      \item coached Team zu selbstorg. und Cross-Funktionalität
+      \item hilft dem Team hochwertige Produkte herzustellen durch Einsatz von technischen Praktiken
+      \item Impediments entfernen, die das Entwicklungsteam aufhalten
+      \item coach zum Scrum-lernen
+      \item teilnehmen an Scrum-Events, sofern es notwendig ist
+    \end{itemize}
+  \item \ulbf{unterstützt die Org}:
+    \begin{itemize}
+      \item planen, leiten und coachen der Scrum-Einführung
+      \item hilft Angestellten und Stakeholder Scrum zu verstehen und das Scrum nun
+        vorgeschrieben ist und empirische Produkt-Entwicklung ist
+      \item Änderung herbeiführen, die die Produktivität des Scrum-Teams erhöht
+      \item arbeitet mir anderen SMs zusammen, um die Effektivität von Scrum in der Org zu
+        erhöhen
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Schätzen}
+\begin{itemize}
+  \item Team schätzt, um ein Gefühl zu bekommen, wie viel Sie schaffen können, es nützt nix, was man
+    nur für den PO tun kann.
+  \item  Schätzen ohne Erfahrungen ist schwierig $\Rightarrow$  \uline{z.B.} die Schätzungen
+    über verschiedene Staaten, wie oft darin ein Land von der Größe Deutschlands reinpassen
+    würde\footnote{während der Übung anstelle von Ländern in $km^2$ geschätzt, wäre es noch
+    viel schwieriger geworden}
+  \item ist in Agiler Entwicklung weniger wichtig als in traditioneller Entwicklung $\Rightarrow$
+    wenn man das Produkt in kleine auslieferbare Zustände hält, dann wird die Arbeit stets so
+    herumpriorisiert
+  \item manche Teams benutzen einfaches Schätzen: Alles ist entweder \enquote{Small} oder wird in
+    kleinere Stücke heruntergebrochen
+\end{itemize}
+
+
+\textbf{Bucket-Schätzung/Magic Estimation}
+\begin{itemize}
+  \item eignet sich für eine große Menge an Stories
+  \item gut Einsortierung in bestimmte Story-Cluster Größen und können auch helfen, zu große
+    Stories in weitere kleinere Stories aufzubrechen \oder aber ein weite Stories ergeben sich
+  \item ist nur eine grobe Schätzung
+  \item ist gut beim initialen Aufsetzen des Backlogs
+  \item \textbf{Warum abstrakte Größen?} Stehen jeweils in Relation über den absoluten Wert,
+    \uline{z.B.} XXL, XL, L, M, S, XS; sind anpassbar; Grundrauschen hat man dabei und schätzen ist
+    für jeden anders; es ist okay, wenn es Ausreiser gibt, aber wenn es diese andauernd gibt,
+    dann sollte man Anpassungen vornehmen
+  \item \textbf{Schätzpoker}: wird beim \textit{SP} verwendet
+    \begin{itemize}
+      \item verdecktes Schätzen
+      \item gemeinsames Aufdecken
+      \item 1 vs 8 geschätzt $\Rightarrow$  wenn ich Experte bin, heißt es nicht, dass man an
+        alles denkt, deswegen ist es gut wenn Abweichungen im Team hat; man lässt sich auf
+        Teamschätzung vs. Einzelschätzung ein
+      \item Teamschätzungen verhindern Aufbau von Wissensinseln
+      \item gemeinsames Verständnis
+      \item wenn Management etwas möchte, von dem man keine Ahnung hat, dann kann man Experte
+        rufen \oder 1-2 Wochen Recherche machen
+      \item L \oder M $\Rightarrow$  solche als Stories geschätzten Größen bedeuten, dass die
+        Story sehr komplex ist und man ein großes Risiko hat.
+    \end{itemize}
+\end{itemize}
+\pagebreak
+
+
+\section{Scrum Ereignisse/Scrum Meetings}
+\begin{itemize}
+  \item bestehen aus \enquote{\textbf{Sprint}}, \enquote{\textbf{Sprint Planning}},
+        \enquote{\textbf{Daily Scrum}}, \enquote{\textbf{Sprint Review}} und \enquote{\textbf{Sprint Retrospective}}
+  \item \textbf{richtige Reihenfolge}: Release Planning, Sprint Planning, Sprint, Daily Scrum, Sprint Review, and Sprint Retrospective
+  \item sollen regelmäßig stattfinden und die Anzahl der Meetings, die nicht
+    in Scrum definiert sind, zu minimieren
+  \item alle Events sind \textit{timeboxed}, d.h. jedes Ergeignis hat eine maximale Dauer
+  \item Sprintlänge ist fest und wird niemals erweitert\footnote{andere Events enden, wenn deren Zweck
+    erfüllt ist, wobei entsprechend Zeit dafür genommen wird ohne dabei Verschwendung in den
+    Prozess zuzulassen)}
+  \item anders als der Sprint selbst (welcher ein Container für alle anderen Events ist), hat
+    jedes Event die Möglichkeit zum \textit{inspect} und \textit{adapt}. Diese anderen Events wurden so
+    gestaltet, um kritische Transparenz und Einsicht zu gewähren. Wenn eines dieser Events
+    nicht seinen Zweck erfüllt, dann verliert man Transparenz und dadurch die Möglichkeit
+    zum \textit{inspect} und \textit{adapt}
+  \item für einen 30-Tage Sprint sind die Timeboxen fürs SP1 und SP2, Review sowie Retro auf
+    \textbf{jeweils 4 Stunden angesetzt}
+  \item an allen Meetings nimmt SM teil, der keine Entscheidungstreffungs-Authorität hat
+  \item wenn \textbf{Meeting sinnlos} ist, dann höfflich sagen, dass man an der Sache nicht
+    teilhaben kann und dem Meeting keinen weiteren Input mehr liefern kann.
+  \item \textbf{Prisoner of Meeting}: ist jemand, der gezwungen wurde, am Meeting teilzunehmen
+\end{itemize}
+
+
+\subsection{Sprint}
+\begin{itemize}
+  \item Sprint ist der Herzschlag des Scrum Zyklus. Er wird markiert durch das Sprint Planning
+    am Start und Sprint Review und -Retro am Ende
+  \item ist \textbf{timeboxed auf maximal einen Monat oder weniger}, in dem ein
+    fertiges (\enquote{done}), nutzbares und potential auslieferbares Produktinkrement erstellt wird
+  \item neuer Sprint startet unmittelbar nach Abschluss des vorherigen Sprints
+  \item haben am besten eine konstante Dauer
+  \item Sprint besteht aus Sprint Planning, Daily Scrums, die Entwicklungsarbeit, dem
+    Sprint Review und der Sprint Retrospektive
+  \item \textbf{während des Sprints}:
+    \begin{itemize}
+      \item keine Änderungen machen, die eine Gefahr für das Sprint-Ziel darstellen
+      \item Qualitäts-Ziele dürfen nicht herabgesetzt werden
+      \item Scope kann korrigiert und neu verhandelt werden zwischen dem PO und Entwicklungsteam,
+        wenn mehr Wissen vorhanden ist
+    \end{itemize}
+  \item \textbf{Sprint abbrechen}:
+    \begin{itemize}
+      \item kann vor Ablauf der \textit{timebox} nur \textbf{durch PO} geschehen, wobei Stakeholder, dem
+        Entwicklerteam oder auch SM Einfluss darauf haben können
+      \item Sprint würde abgebrochen werden, wenn:
+        \begin{itemize}
+          \item Sprint-Ziel hat keine Bedeutung mehr
+          \item Ausrichtung der Firma hat sich geändert
+          \item Technologie hat sich verändert
+        \end{itemize}
+      \item alle fertiggestellten und als \enquote{done} markieren PBI werden \textit{gereviewed}. Alle
+        unfertigen PBIs werden erneut geschätzt und ins Product Backlog gepackt
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Sprint Planning}
+\begin{Beschreibungfett}[Zusammenfassung]
+\item [Zusammenfassung] Scrum Team erarbeitet gemeinsam die zu erledigende Arbeit für den kommenden
+  Sprint und versucht diese zu verstehen \footnote{Teil 1 ist das WAS und Teil 2 ist das WIE}
+  \item [Teilnehmer] SP 1: PO, Team, SM; SP 2: Team, SM, (PO)
+  \item [Input]: Scrum-Team, Sprint-Länge, vorherigere Sprint Velocity, schätzte Stories, Abhängigkeiten, Team-Kalender (Abwesenheiten)
+  \item [Output] Sprint Backlog, Burndown Chart, Sprint-Ziel
+  \item [Ziele]
+    \begin{itemize}
+      \item Entwicklungs-Team versteht und definiert zu schaffende Arbeit\footnote{in der ersten Hälfte wird das
+          \textbf{Sprint Ziel} erstellt (muss man sehr großzügig sein, da nicht immer alle
+          involviert sind) und in der zweiten Hälfte das \textbf{Sprint Backlog}}
+      \item SP1: Team \textbf{forecast} sich zu den PBIs
+      \item SP2: Erstellt die Tasks zu den einzelnen PBIs
+    \end{itemize}
+  \item [Fakten]
+  \begin{itemize}
+    \item das ganze Team nimmt teil am Meeting
+    \item PO entscheidet, welche PBIs am wertvollsten sind.
+    \item SP1 und SP2 ist \textit{timeboxed} $5\%$ der Sprintzeit und hat eine maximale Länge von \textbf{insgesamt 8
+        Stunden für einen Monats-Sprint}\footnote{SP1 und SP2 dauern \textbf{maximal jeweils 2 Stunden für ein zwei
+          Wochensprints}, \textbf{maximal jeweils 1 Stunde für ein Wochensprints}}
+    \item \textbf{Sprint-Ziel} ist definiert\footnote{ist eine
+    Zielvorstellung die durch Implementierung der PBIs des Sprint erfüllt wird und ist ein
+    Leitfaden fürs Team, warum gerade genau dieses Inkrement gebaut wird und hilft den  Fokus zu
+    wahren und sich weniger mit kleinen Details aufzuhalten}
+    \item SM achtet darauf, dass das Meeting stattfindet und das die Teilnehmer die Absicht
+      des Meetings verstehen und achtet auf die Einhaltung der Zeit
+  \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsubsection{SP1}
+\begin{itemize}
+  \item ist ein detaillierter \textbf{Anforderungs-Workshop}
+  \item PO stellt eine Reihe von angedachten Features vor und das Teams stellt Fragen, um die
+    Anforderungen in ausreichendem Detail zu verstehen, damit Sie den \textit{forecast} abgeben
+    können, das jeweilige Feature im kommenden Sprint zu liefern
+  \item Input fürs Meetings ist Product Backlog, das letzte Produkt-Inkrement, die Teamgröße
+    und die letzte Leistung des Teams
+  \item \textbf{Team entscheidet alleine}, was es in dem Sprint liefern kann\footnote{und denkt an
+      Sprintdauer, Teamgröße, DoD, Abwesenheiten sowie Maßnahmen aus der letzten Retro}
+  \item PO muss während des gesamten Meetings anwesend sein, um das Team in die richtige Richtung
+    zu führen und Rückfragen zu beantworten
+  \item SM muss sicherstellen, dass beliebige andere vom Team zum Verständnis der
+    Anforderungen benötigte Stakeholder anwesend oder rufbereit sind
+  \item die Backlogeinträge, die das Team zur Lieferung zugesagt hat, nennt man
+    \textbf{Selected Product Backlog}
+  \item evtl. neue Backlog-Einträge, die für den laufenden Sprint aufgenommen und noch
+    nicht geschätzt wurden, werden in diesem Meeting sofort bemessen
+  \item am Ende verspricht das Team dem PO die Lieferung einer selbsteingeschätzten
+    Menge an lauffähigen und getesteten Funktionen
+\end{itemize}
+
+
+\subsubsection{SP2}
+\begin{itemize}
+  \item ist ein \textbf{Design-Workshop} und Team erarbeitet gemeinsam einen Grobentwurf der
+    versprochenen Funktionalitäten $\Rightarrow$  wird auch \textbf{Sprint Backlog}\footnote{das
+    Scrum Team ist Besitzer davon; kann während des Sprints nur vom PO geupdated werden} genannt
+  \item Ergebnis dieser Sitzung ist eine Liste von Aufgaben (\textit{tasks}), die dann im Sprint Backlog meist
+    durch ein physisches Task Board dargestellt wird
+  \item \textit{Tasks} variieren in Größe und Aufwand, sollten jedoch maximal einen Tag oder weniger zur
+    Fertigstellung dauern
+  \item PO muss für Fragen bereitstehen und die Items eventuell neu verhandeln, wenn das
+    Entwicklerteam entdeckt, dass es zu viel oder zu wenig zu tun hat
+  \item SM muss sicherstellen, dass der PO sowie weitere Stakeholder zur Klärung
+    von weiteren Fragen bereitstehen
+  \item Entwicklungs-Team hat die Verantwortung, wie die Arbeit getan wird
+\end{itemize}
+
+
+\subsection{Daily Scrum}
+Wird auch \textbf{daily scrum}, \textbf{daily huddle}, oder \textbf{morning roll-call} genannt.
+
+\begin{Beschreibungfett}[Zusammenfassung]
+  \item [Zusammenfassung] Update und Koordination zwischen den Team-Mitgliederr
+  \item [Teilnehmer] Entwicklungs-Team, (PO), (SM)\footnote{ist anwesend und garantiert, dass das
+      Meeting stattfindet}, (andere Stakeholder)\footnote{gesellen sich dazu und hören zu}
+  \item [Input] Entwicklungs-Team, SM, Burndown Chart, Impediment Log, Scrumboard
+  \item [Output] update Burndown Chart, update Impediment Log, motiviertes Scrum Team, update
+    Scrumboard, nicht zugestimmte Änderungswünsche
+  \item [Ziele]
+    \begin{itemize}
+      \item jeden Tag zur gleichen Zeit am gleichen Ort treffen, um 15 Minuten lang sich gegenseitig
+        vom aktuellen Stand der Dinge zu informieren\footnote{Kommunikation + Synchronisation}
+      \item Antwort auf Fragen: Was habe ich seit letzten Daily erreicht? Was möchte ich bis zum
+        nächsten Daily erreichen? Was bremst meinen Fortschritt?
+      \item Unterstützung von Verbesserungen
+    \end{itemize}
+  \item [Fakten]
+  \begin{itemize}
+    \item man steht beim Meeting, damit es kurz und knapp ist
+    \item kurz, klärende Fragen und Antworten sind angemessen, aber keine weiterführende
+      Diskussion dieser Themen
+    \item übergeordnete Themen müssen \textbf{nach dem Daily} mit den entsprechenden Personen
+      besprochen werden
+    \item man berichtet dem Team gegenüber nicht irgendeinen Boss oder Manager\footnote{wenn Boss da ist, dann hindert der \textit{invisible gun effect} die Selbst-Organisation}
+    \item SM stellt sicher, dass Daily Scrum stattfindet, das alle drei Fragen beantwortet werden,
+      das alle reden können, \textit{timebox} einhalten und leitet Diskussionen
+    \item das Entwicklungsteam führt dieses Meeting
+    \item Dinge, die nicht in der Hand des Teams liegen, werden als \textbf{organizational impediments} bezeichnet
+    \item \textbf{Pair Reporting}: wenn man eh den ganzen Tag zusammenhockt, dann kann auch nur
+      einer von beiden sprechen
+    \item \textbf{GIFTS}: Good Start, Improvement, Fokus, Team, Status
+      \begin{itemize}
+        \item \textbf{Good start}: sollte Energie geben
+        \item \textbf{Improvement}: Können nix reparieren, von dem wir nicht wissen, dass es ein
+          Problem ist, hat aber nix nur mit Problemlösung zu tun, sondern auch mit besseren
+          Arbeitsweisen und Ideentausch zu tun
+        \item \textbf{Fokus}: Arbeit durchs System schleusen, so dass man die gewünschten Ziele
+          erreichen kann
+        \item \textbf{Team}: reden, arbeiten und sich gegenseitig helfen. Ein effektives Team ist
+          autonom
+        \item \textbf{Status}:
+      \end{itemize}
+    \item \textbf{Sprachreihenfolge:}
+      \begin{itemize}
+        \item LIFO: dann muss niemand jemand bestimmen, der zu erst anfängt zu reden, das
+          fördert die Selbstorg.
+        \item Round-Robin: Irgendwo anfangen und dann im Uhrzeigersinn oder
+          entgegengesetzer Uhrzeigersinn
+        \item Token herumreichen
+      \end{itemize}
+    \item \textbf{Improvement Board}:
+      \begin{itemize}
+        \item werden während des Dailys benannt und ans Board gemacht
+        \item Board ist von allen einsehbar und es misst den Fortschritt zur Erfüllung des Problems
+        \item Updates können außerhalb des Dailys gemacht werden
+        \item durchs aufschreiben verhindert man ausufernde Diskussionen
+        \item Board kann die Spalten: Problem, Anzahl, Eindämmung, Gegenmaßnahme, Status
+          (Plan, Do, Check, Act)
+      \end{itemize}
+  \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsection{Sprint Review}
+\begin{Beschreibungfett}[Zusammenfassung]
+  \item [Zusammenfassung] Inspektion und Adaption in Bezug aufs Produkt-Inkrement
+  \item [Teilnehmer] Team, PO, weitere Stakeholder, die vom Stakeholder eingeladen werden
+  \item [Input] Scrum-Team, Sprint Ergebnisse, Sprint Backlog, Stakeholder, Abhängigkeiten
+  \item [Output] Akzeptiere/abgelehnte Sprint-Inkremente, update Risiken, updaten Abhängigkeiten,
+    update Release Planning, update PB
+  \item [Ziele]
+    \begin{itemize}
+      \item Entwicklerteam zeigt die geschaffte Arbeit und beantwortet Fragen zum Inkrement
+      \item Live zeigen und Feedback für eventuelle weitere Änderungen zu erhalten
+      \item überarbeitetes PB
+    \end{itemize}
+  \item [Fakten]
+  \begin{itemize}
+    \item wird am Ende eines Sprints durchgeführt, um das Inkrement zu \textit{inspecten} und da PB bei
+      Bedarf zu \textit{adopten}
+    \item \textit{timeboxed} auf $2,5\%$ der Sprintzeit (\textbf{4 Stunden für Monatssprint}, \textbf{1 Stunde für Wochensprint})
+    \item ist ein informelles Meeting und soll Feedback und Zusammenarbeit fördern
+    \item nach der Präsentation guckt sich der PO die Commitments an und entscheidet, welche Items
+      \textit{done} sind und welche nicht
+    \item wird eine Story nicht fertig, dann landet Sie wieder im Backlog
+    \item SM hilft dem PO und Stakeholder, dass Feedback zu neuen Items zur
+      Priorisierung durch den PO abzuleiten
+  \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsection{Retrospektive}
+\begin{Beschreibungfett}[Zusammenfassung]
+  \item [Zusammenfassung] Inspektion und Adaption in Bezug auf den Prozess und der Umgebung
+  \item [Teilnehmer] Entwicklungs-Team, SM, (PO), weitere Stakeholder vom Team gewünscht
+  \item [Input] Entwicklungs-Team, SM, (PO)
+  \item [Output] ausführbare und einverstandene Änderungen, Änderungen sind Personen zugewiesen mit
+    möglichen Enddatum, Retro-Logs, gelernte Sachen
+  \item [Ziele] Team checkt Prozess, Verhalten, Werkzeuge und macht Action, um es für kommende Sprints zu ändern
+  \item [Fakten]
+    \begin{itemize}
+      \item findet nach dem Sprint Review statt und vor der nächsten Sprint-Planung
+      \item \textit{timeboxed} auf $2,5\%$ der Sprintzeit (\textbf{2 Stunden bei 2 Wochen Sprints}, \textbf{1 Stunde für einen Wochensprint})
+      \item SM stellt sicher, dass das Event stattfindet und das alle den Sinn des Meetings
+        verstehen
+      \item große Dinge identifizieren, die gut und auch potential zur Verbesserung haben
+      \item Team checkt ihr Verhalten und macht Action, um es für kommende Sprints zu ändern
+      \item gute Retro braucht den Sicherheitsfaktor, um wichtige Themen hervorzubringen und kein
+        Blaming zu haben
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsection{Weitere}
+
+\subsubsection{Scrum of Scrums}
+\begin{itemize}
+  \item wird verwendet, wenn mehrere Scrum Teams an einer Sache arbeiten und sich gegenseitig
+    updaten und korrigieren müssen
+  \item dabei werden folgende Fragen beantwortet:
+    \begin{enumerate}
+      \item An was hat das Team seit dem letzten Meeting gearbeitet?
+      \item Was schafft das Team bis zum nächsten Meeting?
+      \item Was sind die \textit{Impediments} und können andere Teams helfen?
+      \item Was für Entscheidungen habt ihr getroffen, die andere Teams beeinflussen können?
+    \end{enumerate}
+\end{itemize}
+\pagebreak
+
+
+\section{Artefakte}
+Repräsentieren Wert, um Transparenz sowie die Möglichkeit zum \textit{inspect} und \textit{adapt}.
+Scrum fordert \textbf{vier} Artefakte:
+
+\begin{enumerate}
+  \item Product Backlog
+  \item Sprint Backlog
+  \item Produktinkrement
+  \item Burndown Chart
+  \item Impediment Backlog
+\end{enumerate}
+
+
+\subsection{Product Backlog}
+\begin{itemize}
+  \item ist eine vom PO \textit{priorisierte Liste} von zu erledigenden Dingen
+  \item ist die einzige Quelle für Anforderungen und Änderungen, die am Produkt gemacht werden,
+    d.h. alle Arbeiten des Entwicklungs-Team kommen aus dem PB
+  \item PO ist dafür verantwortlich, dass es \textit{verfügbar}, \textit{geordnet} und mit
+    \textit{Inhalt} versehen ist
+  \item PB ist \textbf{dynamisch}\footnote{Anforderungen werden sich immer ändern} (lebendes Dokument) und niemals beendet
+  \item ist für alle (PO, Teammitglieder, Stakeholder) \textit{einsehbar} und \textit{ergänzbar}
+  \item PB wird während des Backlog Refinement Meetings gewartet\footnote{d.h. Einträge sind zu groß
+      oder generell und Ideen kommen und gehen}
+  \item PO ist dafür verantwortlich und muss Rechenschaft dafür ablegen, dass das PB richtig
+    geführt wird, auch wenn er bei der Erstellung und Aktualisierung Hilfe in Anspruch nehmen kann
+  \item \textbf{INVEST}\footnote{Zeichen einer guten Story, so sollen Anforderungen aussehen}:
+    \begin{itemize}
+      \item \textbf{Independent}: sollen nicht von einer anderen Story abhängen
+      \item \textbf{Negotiable}: details noch verhandelbar sein, wenn man merkt, dass
+        manche Dinge anders umgesetzt werden müssen, als erwartet
+      \item \textbf{Valuable}: muss Kundennutzen stiften
+      \item \textbf{Estimable}: muss nicht exakt sein, aber wir sollten eine ungefähre Schätzung
+        abgeben können.
+      \item \textbf{Small}: wenn sie zu groß sind, ist es ein Indikator, dass man die Story nicht
+        ganz versteht.
+      \item \textbf{Testable}: Story ist testbar
+    \end{itemize}
+  \item Produkte sollen ein PB haben, egal wie viele Teams es verwenden, alles andere macht es
+    schwierig für die Teams festzustellen, an was sie als nächstes arbeiten sollen
+\end{itemize}
+
+
+\ulbfab{Product Backlog Item}
+
+
+\begin{itemize}
+  \item beschreibt das \textbf{WAS}
+  \item wird oft in \textbf{User Story Form} geschrieben
+  \item hat eine Produktweite  \textit{Definition von done} (DoD), um \textit{technnical dept} zu vermeiden
+  \item kann item-Abhängige Akzeptanzkriterien beinhalten
+  \item wird nur dann als \textbf{fertig} betrachtet, wenn es die DoD erfüllt
+  \item \textbf{DEEP}\footnote{Eigenschaft eines guten PBI}:
+    \begin{itemize}
+      \item \textbf{Detailed}: höher priorisierte Items sind detailierter als weniger niedrig
+        priorisierte Items
+      \item \textbf{Estimated}: sollten eine Schätzung haben, aber sollten auch mal wieder
+        neugeschätzt werden, sofern es weitere Informationen gibt
+      \item \textbf{Emergent}: Durch learnings und Veränderungen, sollte jedes PBI verändert
+        werden können oder aber auch gesplittet, verändert oder gelöscht werden
+      \item \textbf{Priorisiert}: höchstens Items sollten den meisten \textit{bang for your buck} liefern
+    \end{itemize}
+\end{itemize}
+
+
+\subsubsection{Backlog Refinement}
+Wird auch \textbf{Product Backlog Grooming}, \textbf{Product Backlog Review}, \textbf{Backlog Estimation} oder \textbf{Story Time} genannt
+
+
+\begin{Beschreibungfett}[Zusammenfassung]
+  \item [Zusammenfassung] Splittung von großen Stories, Neuschätzung und Umpriorisierung für zukünftige Sprints
+  \item [Teilnehmer] Team, PO, SM ist anwesend und garantiert, dass das Meeting stattfindet, eventuell weitere Stakeholder
+  \item [Ziele]
+    \begin{itemize}
+      \item Schätzungen von Einträgen\footnote{80-20 Regel: 80$\%$ des Business Values können mit
+        20$\%$ Aufwand erreicht werden}
+      \item Anforderungen klären
+      \item Entfernung oder Herabstufung von Items, die nicht mehr relevant sind
+      \item Hinzupflegung oder Heraufstufung von Items, die neu hinzugekommen oder wichtiger geworden
+        sind
+      \item Items herunterzubrechen und Unklarheiten zu beseitigen
+      \item Items zu größeren Einträgen verschmelzen
+    \end{itemize}
+  \item [Fakten]
+  \begin{itemize}
+    \item \textit{timeboxed} auf $10\%$ der Sprintzeit (\textbf{8 Stunden bei 2 Wochen Sprints},
+      \textbf{4 Stunden bei 1 Wochen Sprints})
+    \item PBIs werden in \enquote{User Story} Form geschrieben $\Rightarrow$  übergroße PBIs werden \textbf{Epics} genannt
+  \end{itemize}
+\end{Beschreibungfett}
+
+
+\ulbfab{Wonach priorisieren?}
+
+\begin{itemize}
+  \item Fälligkeit $\Rightarrow$ \textit{fixed date}; Wert/Nutzen
+  \item \textit{Expedite} $\Rightarrow$ verursacht von Anfang an Kosten und die steigen dann später immer mehr an
+  \item \textit{cost of delay}: wenn ich etwas nicht mache, desto teuer wird es
+  \item \textit{intangible}: du musst es noch nicht heute haben, sondern erst, du kannst es heute aber schon anbieten
+  \item \textbf{Kano Modell} (wie zufrieden/unzufrieden ist Kunde mit Feature $xy$)
+\end{itemize}
+
+
+\ulbfab{Methoden für Splittung}
+
+
+\begin{itemize}
+  \item Schichten beim Login: UI, MW, BE $\Rightarrow$  \textbf{vertikale Schnitte nach
+    Funktionalität} ist besser, als wenn man erst eine Schicht komplett fertig baut und dann
+  merkt, dass das gebaute mit dem Rest nicht mehr richtig funktioniert und/oder sich dann
+  eventuell andere auf Fertigstellung warten, bis weiter gearbeitet werden kann
+  \item \textbf{Dimensional Planning}: \uline{z.B.} Straße bauen (Schotter, Landstraße,
+    Autobahn) $\Rightarrow$  durch billige Lösungen bekommst du schneller Feedback
+    \item \textbf{statisch vs. dynamisch bauen}: statisch $\Rightarrow$  API call liefert immer
+    denselben Wert zurück
+  \item \textbf{Business Rule Variations (Was)}: \uline{z.B.} unterschiedliche Zahlmethoden, Kündigung
+  \item \textbf{Data Event Methode (Wie)}: Ich erfasse nicht alle Daten für einen
+    Anwendungsfall, \uline{z.B.} Warum-Feld, wenn Sie bei uns kündigen \oder
+    Sicherheitsnummern bei der Kreditkartenzahlung
+  \item manuell vs. automatisch
+  \item \textbf{Error-Handling}: erstmal alles abfangen, aber später konkret sagen, was alles
+    schief läuft in Detail sagen
+  \item Singe- vs Multiuser
+  \item \textbf{Performance}: nicht gleich im ersten Schritt performant gestalten
+  \item \textbf{Variation in Data}: Lokalisierung
+  \item \textbf{Wege zur Story Splittung}:
+  \begin{enumerate}
+    \item Fokus auf bestimmte User-Rolle oder Persona
+    \item Basis Funktion (bekomme es lauffähig, dann hübsch machen)
+    \item folge CRUD
+    \item disjunkte Szenarios: happy path, exceptions flows
+    \item vereinfachte Datenmenge
+    \item vereinfachter Algorithmus
+    \item Komponenten kaufen, statt es alleine zu bauen
+    \item Technologien fallen lassen, die Abhängigkeiten, Vendor Lock und Schwierigkeiten
+    \item manuellen Prozess automatisieren
+    \item Batch-Processing auf Online-Processing umwandeln
+    \item Ersetze generische Lösung durch angepasste Lösung
+    \item nicht so viele HW, OS, Browser unterstützen
+    \item anhand der AKs eine weitere Story splitten
+    \item Scanne nach Wörtern wie \enquote{und} und \enquote{oder}
+  \end{enumerate}
+\end{itemize}
+
+
+\subsection{Sprint Backlog}
+Wird auch \textbf{Taskboard} oder \textbf{Scrumboard} genannt
+
+
+\begin{itemize}
+  \item die aus dem PB ausgewählten Items und der Plan, diese zu liefern, wird Sprint Backlog genannt
+  \item beschreibt das \textbf{WIE} und ist ein \textit{forecast}, welche Funktionalitäten
+    im nächsten Inkrement geliefert werden
+  \item initiale Tasks werden vom Team während des Sprint Planning Meetings bestimmt
+  \item nur PO kann das Sprint Backlog während des laufenden Sprints bestimmen, ob es angemessen
+    ist, das Board updaten, Entwickler können jedoch weitere Tasks während des Sprints ans Board
+    machen
+  \item ist fürs Team sichtbar
+  \item Scope commitment ist fest während der Sprint Ausführung
+  \item \textbf{Sprint Taks}: benötigen einen Tag oder weniger zur Fertigstellung
+\end{itemize}
+
+
+\subsection{Inkrement/Produktinkrement}
+\begin{itemize}
+  \item ist das Ergebnis aus allen im Sprint fertiggestellten PBIs am Ende des Sprints
+  \item ist so hochwertig, dass es den Nutzern ausgeliefert werden
+  \item muss der \textbf{DoD} entsprechen
+  \item muss in jedem Bereich vom PO abnehmbar sein
+\end{itemize}
+
+
+\subsection{Burndown Chart/Sprint Burndown Chart}
+\begin{itemize}
+  \item stellt den \textit{verbliebenen Team-Aufwand (Arbeit) für den laufenden Sprint dar}
+  \item wird jeden Tag zum Daily neugeschätzt und kann auch mal hochgehen
+  \item hat die Absicht die Selbstorg. des Teams zu fördern
+  \item wenn es missbraucht wird für Management-Status Reports, dann sollte es vom SM
+    nicht weiter gepflegt werden, wenn es fürs Teams zum Impediment wird
+\end{itemize}
+
+
+\subsection{Impediment Backlog}
+\begin{itemize}
+  \item Liste von Dingen, die das Team davon abhalten, Fortschritte zu erzielen oder sich zu
+    verbessern
+  \item es handelt sich dabei um Dinge, die der SM aus dem Weg räumen muss, sei es die
+    Reparatur der Kaffeemaschine
+\end{itemize}
+
+
+\subsection{Andere Artefakte}
+\begin{itemize}
+  \item \textbf{Teamvertrag}: ist wie eine Teamcharta, \uline{z.B.} wir machen
+    Pair-Programming, reden miteinander, machen TDD usw. $\Rightarrow$  es regelt die Arbeit
+    miteinander
+  \item \textbf{Definition of Ready}: wenn PO sagt \enquote{weiß nicht}, dann mit PO zusammen
+    klären, wie man es dann umsetzen kann; Story ist so herunter geschrieben, dass man mit dem
+    Entwickeln anfangen kann
+  \item \textbf{Definition of Done}\footnote{wird gemacht, um \textit{technical debt} Einhalt zu
+      gebieten}: ist sowohl mit Team als auch mit PO vereinbart, arbeiten
+    mehrere Teams am gleichen System oder Produktrelease, dann müssen sie ein gemeinsames Verständnis davon haben
+  \item \textbf{Product/Release Burndown Chart}
+  \begin{itemize}
+    \item zeichnet die verbliebenen Product Backlog Aufwand von einem Sprint zum nächsten
+      auf\footnote{geht über die Zeit für den Release-Plan}
+    \item kann relative Einheiten verwenden: Story Points auf Y-Achse, X-Achse die Sprints
+  \end{itemize}
+  \item \textbf{Release Plannung} nimmt ca. $15-20 \%$ der Zeit in Anspruch
+\end{itemize}
+\pagebreak
+
+
+\section{Schätzungen}
+\begin{itemize}
+  \item Team schätzt, um ein Gefühl zu bekommen, wieviel Sie schaffen können, es nützt nix, was man
+    nur für den PO tun kann.
+  \item \textbf{Schätzungen weichen ab}: statt ständig nach den Ursachen zu forschen, dran denken, dass das
+    Team fixe Kosten hat; Team kann die entsprechende Menge liefern, zu der Sie gefühlt in der
+    Lage sind
+  \item \textbf{Schätzen ohne Erfahrungen ist schwierig} $\Rightarrow$  \uline{z.B.} die Schätzungen
+    über verschiedene Staaten, wie oft darin ein Land von der Größe Deutschlands reinpassen
+    würde (hätten wir während der Übung anstelle von Ländern in $km^2$ geschätzt, wäre es noch
+    viel schwieriger geworden)
+  \item ist in Agiler Entwicklung weniger wichtig als in traditioneller Entwicklung $\Rightarrow$
+  wenn man das Produkt in kleine auslieferbare Zustände hält, dann wird die Arbeit stets so
+  herumpriorisiert
+  \item komplexe Modelle mit historischen Daten funktionieren einfach nicht, einfachere und
+    schnellere Techniken wie Planning Poker und \textbf{Affinity Estimating} liefern genau
+    so gute Ergebnisse und sind weniger komplex
+  \item \textbf{Schätzungen sind immer ungenau}
+  \item Personen, die die Aufgabe ausführen, sollen immer bei der Schätzung dabei sein
+  \item mehr Erfahrung bedeutet präzisere Schätzung
+  \item manche Teams benutzen einfaches Schätzen: Alles ist entweder \enquote{Small} oder wird in
+    kleinere Stücke heruntergebrochen
+\end{itemize}
+
+
+\subsection{Abstrake Schätzmaße}
+\begin{itemize}
+  \item es wird nicht mehr in Aufwand, sondern Komplexität geschätzt, da es die folgenden Vorteile
+    bietet:
+    \begin{itemize}
+      \item vergleichende/abstrakte Schätzungen sind schneller durchführbar als Schätzen
+        absoluter Größen
+      \item Komplexitäts-Schätzungen altern nicht, d.h. müssen nicht während eines Projekts
+        durch Neuschätzungen korrigiert werden. Z.B. dauert das Formular-Eingabe Formular durch
+        fehlende Erfahrung deutlich länger als im späteren Projektverlauf, aber die
+        Komplexität bleibt aus Anwendersicht gleich und muss nicht angepasst werden
+      \item Trennung von Komplexität und Aufwand wird mehr Objektivität geschaffen, ohne die
+        umsetzenden Individuen zu kennen
+      \item Bei Komplexitätsschätzung muss nicht bereits die Geschwindigkeit
+        unterschiedlicher Entwickler einkalkuliert werden, was die Schätzung aufwändig und
+        personenbezogen machen würde
+    \end{itemize}
+  \item Vielschichtigkeit der Komplexität:
+    \begin{itemize}
+      \item es gibt einen komplizierten Ablauf
+      \item es sind viele Bereiche der Software betroffen
+      \item es sind sehr viele Änderungen vorzunehmen
+      \item es sind viele Personen involviert
+    \end{itemize}
+  \item eine mögliche Einheit sind Fibonacci Zahlen:
+    \begin{itemize}
+      \item 0 - Kein Aufwand notwendig.
+      \item 1 - Sehr kleiner Umfang.
+      \item 2 - Kleiner Umfang: doppelt so wie ein kleiner Umfang.
+      \item 3 - Mittlerer Umfang: so gross wie ein sehr kleiner und ein kleiner Umfang zusammen.
+      \item 5 - Grosser Umfang: so gross, wie ein kleiner und mittlerer Umfang zusammen.
+      \item 8 - Sehr grosser Umfang: so gross, wie ein mittlerer und grosser Umfang zusammen.
+      \item 13 - Riesiger Umfang: so gross, wie ein grosser und sehr grosser Umfang zusammen.
+      \item ? - Nicht abschätzbar.
+    \end{itemize}
+\end{itemize}
+
+
+\ulbf{Wie wird aus der abstrakten Schätzung eine Aufwandsabschätzung?}
+
+\begin{itemize}
+  \item gelangt man nur über den \textbf{Velocity} Faktor, der angibt, wie viele Story-Points in
+    einem definierten Zeitbereich umgesetzt werden können
+  \item Velocity kann man durch folgende Varianten ermitteln:
+    \begin{enumerate}
+      \item \textbf{Historische Daten}: Aus der Vergangenheit ist es bekannt, wichtig ist,
+        dass die Teamzusammensetzung vergleichbar ist
+      \item \textbf{Vorprojekt}: ein kleiner Ausschnitt des Gesamtprojekts wird in
+        einem kurzen Vorprojekt umgesetzt und daraus die Velocity-Kennziffer ermittelt
+      \item \textbf{Schätzen}: gibts keine historischen Daten und/oder kein Vorprojekt, dann
+        hilft nur die Bauchentscheidung
+    \end{enumerate}
+  \item wenn man die Team-Aufstellungen verändert, dann invalidiert das die
+    Velocity-Messungen
+  \item Wenn man mehr Leute ins Team holt, dann kann dies ebenfalls die Velocity Zahl
+    senken
+  \item \textbf{Sustainable Velocity} kann erst entstehen, wenn man mehrere hintereinander
+    ausgeführte Sprints fester Länge und mit gleicher Team-Stärke durchgeführt hat
+  \item Velocity Messungen klappen am besten, wenn man End-To-End Features am Ende eines
+    jeden Produktes ausrollt, so wie es vom Scrum-Framework vorgeschlagen wird
+    (NFR-Stories durchbrechen diese Linie mal wieder)
+\end{itemize}
+
+
+\subsection{Konzepte des agilen Schätzens}
+\begin{itemize}
+  \item stellen den Bezug zwischen unseren Größenbestimmungen zur Dauer
+    durch die Verwendung der Velocity her, die Rate, in der ein Team lauffähige,
+    getestete Features an den Product Owner liefern kann. Wir sagen, ein Team
+    hat eine Velocity von 25, wenn es am Ende jedes Sprints \enquote{fertige Stories}
+    abliefern kann, deren aufsummierte Größen im Durchschnitt 25 Punkte betragen
+  \item \ulbf{Warum bemessen wir Dinge, die relativ zueinander stehen?}
+    \begin{itemize}
+      \item natürlicher für Menschen
+      \item man kann sich leichter darauf einigen, dass eine Story doppelte Komplexität wie
+        eine andere Story hat, auch wenn wir nicht wissen, wie lange es dauern wird, jede zu
+        implementieren
+    \end{itemize}
+  \item \ulbf{Warum bemessen wir Dinge in Komplexitäts-Einheiten statt in Zeit?}
+    \begin{itemize}
+      \item ermöglicht und die Rate, in der ein Team arbeitet, von der Größe oder Komplexität der Arbeit zu trennen
+      \item das bewahrt uns davor, unsere Schätzungen anhand dessen zu ändern, \textbf{der die Arbeit
+          macht}, oder wenn die Fertigkeiten und Kapazität des Teams sich mit der Zeit ändert. Wir
+        verwenden Story Points als Einheit
+    \end{itemize}
+  \item \ulbf{Warum eine nicht-lineare Bemessungsskala verwenden?}
+    \begin{itemize}
+      \item weil die Differenz zwischen einer 1 und einer 2 offensichtlich mehr
+        aussagt - relativ betrachtet - als die zwischen einer 20 und 21
+      \item Fibonaccia Zahlen: 1,2,3,5,8,13,20,40
+      \item ein Team kann eventuell Stories im Größenbereich von 1-8 oder vielleicht eine 13
+        schaffen. Die größeren Zahlen sind für Epics definiert, die in kleinere Stories
+        heruntergebrochen werden müssen
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Planning Poker}
+\begin{itemize}
+  \item ist ein guter Weg, um bei der Schätzung von Anforderungen innerhalb von
+    Entwicklungsteams einen Konsens zu finden
+  \item Schätzungen sind meist akkurat, da es von diejenigen Geschätzt wird, welche die Arbeit
+    auch erledigen
+  \item \ulbf{Ablauf}:
+    \begin{itemize}
+      \item PO, Team oder SM stellt die Aufgabe vor und anschließend kann
+        darüber diskutiert werden, Risiken aufgezeigt oder Annahmen getroffen werden
+      \item dann folgt die Schätzrunde: Alle Leute drehen Ihre ihre Karten gleichzeitig aufgedeckt
+        um. Gibt es große Abweichungen, dann wird
+        über den Wert diskutiert. Dabei sagt der SM, dass jeweils die mit den beiden
+        extremsten Ausprägungen diskutieren sollen. Anschließend wird erneut geschätzt. Nun
+        sollte der Wert konvergieren, im Zweifelsfalls wird dann einfach die höhere Schätzung
+        genommen
+      \item wird eine Story $>$ \enquote{13} oder mit einen \enquote{?} geschätzt, dann ist diese von der
+        Detaillierung der Funktion her zu ungenau beschrieben
+    \end{itemize}
+  \item \ulbf{Vorteile}:
+    \begin{itemize}
+      \item \textbf{Teamentscheidungen}: Entscheidungen sollen auf den Konsens aller
+        Teammitglieder aufbauen, alle stehen hinter dem Schätzwert.
+      \item \textbf{Schnelle Entscheidung}: nach wenigen Schätzrunden einigen sich Teamleute
+        meist auf eine Größe (geübtes Team kann in einer durchschnittlichen Rate von 3 Minuten pro
+        PBI schätzen).
+      \item \textbf{Transparenz}: PO versteht besser, wie die Aufwände entstanden sind, kann
+        ein Team nicht schätzen, dann ist dies ein Indikator, dass die Story überarbeitet
+        werden muss.
+      \item \textbf{alle sind beteiligt}: berücksichtigt Gruppendynamische Aspekte, d.h. sehr dominanten oder devoten Personen
+        wird entgegengewirkt, mit dem Ziel dass jedes Gruppenmitglied sich aktiv an der Schätzung
+        beteiligt und sein Wissen beiträgt.
+      \item \textbf{Unterschiedliche Expertenmeinungen}: Aufgaben, die viele unbekannte Variablen beinhalten, ist es gut,
+        wenn sich die verschiedenen Fachbereiche zusammentun und sich miteinander über das
+        Produkt gemeinsam austauschen.
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Team Estimation}
+\begin{itemize}
+  \item sehr technische Teams finden, dass für eine gute Schätzung auch schon die
+    Implementierung bekannt sein muss - Steve Bockman hat mit dieser Schätzvariante eine
+    schöne Lösungsmöglichkeit gefunden:
+  \item \textbf{Ablauf}:
+    \begin{itemize}
+      \item PO, Team, SM sind da
+      \item \textbf{User-Stories auf Karten mitbringen:} Alle Stories liegen auf einzelnen Story
+        Cards aufgedruckt und verdeckt auf einen Stapel.
+      \item \textbf{Reihenfolge herstellen}: Erstes Ziel ist, die Karten nach aufsteigender
+        Komplexität in eine Reihenfolge zu bringen. Ganz unten in der folge liegt die
+        einfachste Karte und ganz oben die Komplexeste $\Rightarrow$  Team muss sich einigen wo
+        einfachste Karte und ganz oben die Komplexeste $\Rightarrow$  Team muss sich einigen wo
+      \enquote{oben} und \enquote{unten} ist.
+      \item \textbf{Team spielt}: Teammitglieder sind reihum dran und jeder Spieler macht einen von
+        zwei möglichen Zügen:
+        \begin{enumerate}
+          \item Spieler \textbf{zieht} eine Karte, liest diese vor und stellt dem PO Verständnisfragen.
+            Draufhin legt er sie an eine von ihm gewählte Stelle innerhalb der Reihenfolge ab
+          \item Spieler \textbf{verschiebt} mit einer kurzen Begründung eine bereits auf dem Tisch
+            liegende Karte an eine andere Stelle in der Reihenfolge
+        \end{enumerate}
+      \item \textbf{herumwandernde Karten}: wandert eine Karte in der Reihenfolge hin und her,
+        muss der PO sie aus dem Spiel nehmen, offenbar ist die Anforderung nicht exakt genug
+        beschrieben und es besteht Uneinigkeit im Team, welchen Inhalt das Feature genau hat
+      \item Ist die Reihenfolge hergestellt, geht es im nächsten Schritt darum,
+        Größenverhältnisse zu beschreiben, um Story-Point-Schätzungen zu ergänzen:
+        \begin{itemize}
+          \item \textbf{Referenz definieren}: Team muss eine Referenz-Story mittlerer Größe
+            auswählen, die es einigermaßen gut überblicken kann.
+          \item \textbf{Referenz beschätzen}: für die ausgewählte Referenz muss eine Schätzung
+            abgegeben werden (entweder schneller mündlicher Konsens oder kleine Pokerrunde zum
+            Thema).
+          \item \textbf{Referenz beibehalten}: Ist das Referenzfeature gewählt und geschätzt,
+            muss es bei folgenden Schätzmeetings als Referenz herhalten und sollte immer mit in
+            die Reihenfolge (erster Schritt) einsortiert werden - und zwar unabhängig davon, ob es
+            bereits realisiert wurde oder nicht.
+          \item \textbf{Skala ergänzen}: nun durchläuft man die Reihenfolge, vom Referenz-Feature aus-
+            gehend, erst nach unten (kleiner) und fragt das Team, ab wann die nächste
+            Stufe in der Skala erreicht wird (Entscheidung im Konsens). Ebenso verfährt man
+            anschließend in die Gegenrichtung.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Magic Estimation}
+Wird auch \textbf{Bucket Estimation} genannt
+\begin{itemize}
+  \item gut, um möglich beim Start eines neuen Projektes mit vielen Stories schnell zu einer Aussage über den
+    gesamten Umfang der zu entwickelnden Funktionalitäten zu gelangen (stammt ursprünglich von
+    Boris Gloger)
+  \item wie beim Planning Poker geht es nicht um Präzision, sondern um eine erste Einschätzung
+  \item \textbf{Ablauf}:
+    \begin{itemize}
+      \item Schätzskala von Fibonacci wird auf den Bode oder ans Board gelegt
+      \item PO packt PBIs ans Bord oder legt sie auf den Boden
+      \item Team fängt an, Karten innerhalb der Schätzskala zu verteilen. Dabei darf weder
+        gesprochen, noch nonverbal per Mimik und Gestik kommuniziert werden
+      \item bei Unklarheiten den PO fragen und sie sollen sich nicht untereinander
+        unterhalten
+      \item ein Teammitglied darf jederzeit eine bereits zugeordnete Karte erneut verschieben
+      \item wandert eine Karte ständig hin und her (\textit{Nervous Nelly}) muss der PO sie
+        aus dem Spiel nehmen, um sie nachträglich zu diskutieren
+    \end{itemize}
+  \item \textbf{Vorteile}:
+    \begin{itemize}
+      \item in kurzer Zeit kann man große Mengen an Anforderungen schätzen lassen
+      \item gut um große Projekte bzw. lange Feature-Listen in eine schnelle
+        Initialschätzung mit minimalem Zeitaufwand zu erhalten
+      \item gemeinsames Verständnis
+      \item Teamschätzungen verhindern Aufbau von Wissensinseln
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{No Estimation}
+\begin{itemize}
+  \item Woody Zuill und Neil Killick sind sehr aktiv in dieser Szene
+  \item \textbf{Allgemein Schätzung}: Eine Schätzung ist eine ungefähre Berechnung oder Beurteilung
+    von  einem Wert, Zahl, Menge oder Umfang
+  \item \textbf{Software Schätzung}: Es ist ein Versuch die Zukunft vorherzusagen
+  \item \textbf{Grund fürs Schätzen}: Bessere Entscheidungen treffen
+  \item Schätzungen sind oft Vermutungen für Anforderungen, die wir nicht genau entdeckt
+    haben und bereits im Vorfeld fürs uns entschieden wurden\footnote{wir verstehen es nicht ganz
+      und können deshalb haben Aussagen darüber auch keinen Wert}
+  \item \textbf{Schätzungen sind schwierig}: Wenn Anforderungen wage sind (sind die meistens),
+    dann ist die Schätzung auch wage; wenn Anforderungen klar sind, kann man nicht
+    sagen, wie lange etwas dauert, wenn man es vorher noch nicht getan hat (wenn man es vorher
+    bereits getan hätte,dann könnte man es ja bereits schon zeigen)
+  \item \textbf{Zustand, dass man keine Schätzungen braucht}: Kleine Stücke von arbeit
+    inkrementel zu erledigen, die schnell zu einem möglichst auslieferbares Produkt
+    kommen
+  \item Schätzungen erlaub Entscheider (Manager, Stakeholder) den Start oder Weiterführung eines
+    Projekts genehmigen. Aufgrund dessen können Sie Entwickler die Schuld an ungenauen Schätzungen
+    geben und schneller arbeiten sollen. Und die Entwickler beschweren sich über unklare, nicht korrekte und falsche
+    Anforderungen $\Rightarrow$  großer Kreis von blaming und keiner hat am Ende gewonnen
+  \item Zeit, die man zum Schätzen von Stories verwendet, die nicht geliefert werden (oder
+    mit Verzögerung) ist Verschwendung
+  \item \textbf{Nachdenkfragen}:
+    \begin{enumerate}
+      \item Wenn du herausfindest, das Schätzungen wertlos sind, was kann man dann machen?
+      \item Wenn Schätzungen falsche Erwartungen wecken und falsche Signale sind, was machst?
+      \item Wenn Schätzungen nie existiert hätten oder nie erfunden wurden, könnten wir dann
+        arbeiten?
+      \item Wenn du einen besseren Weg zur Erledigung von Arbeit gefunden hast, würdest du dann
+        weiterhin schätzen?
+      \item Was ist, wenn ich Schätzungen brauche, aber wir sie nicht gut durchführen, wie kann
+        man das reparieren?
+      \item hat ein PO jemals einer Story über eine andere geschoben, weil eine Story niedriger
+        geschätzt wurde? Wenn Antwort nein ist, dann ist die Schätzung müll, da die Schätzung
+        nicht zur Entscheidung beigetragen hat. Wenn Antwort ja ist, dann ist es
+        schätzungs-kontrolliert, was dann mehr auf Wert-basierte Entscheidungen geht,
+        wenn man dann das Backlog so nimmt und Release Planning auf Velocity Basis macht,
+        dann ist ist es ein kosten-basierter Ansatz (somit würde es Google, Facebook,
+        Spotify usw. nicht geben)
+    \end{enumerate}
+  \item Aufruf:
+    \begin{itemize}
+      \item benutze richtige Beschränkungen, um Entscheidungen zu treffen, z.B so viel Geld geben
+        wir aus oder bis Juni wollen wir fertig sein
+      \item beliebige Beschränkungen (Deadlines ohne Schätzung) verursachen
+        dysfunktionale und ineffektives Verhalten
+      \item Stories klein und simpel halten, WIP Limit erstellt ein vorhersehbares System
+    \end{itemize}
+  \item Wir können Software nicht bauen, ohne zu wissen, wie lange es dauert und wie teuer es
+    ist? Es gibt keine Sicherheit in der Softwareentwicklung, wenn man über Kosten und Zeit
+    schätzt, dann generiert man Unsicherheit, weil du ratest
+\end{itemize}
+
+
+\ulbf{Wie kann man ohne Schätzungen arbeiten}
+\begin{itemize}
+  \item mache echte Arbeit (schafft vertrauen, man ist höflich)
+  \item liefere kleine, nützliche Dinge vom gesamten Ding aus
+  \item immer an etwas mit einen Nutzen arbeiten
+  \item liefere früh und regelmäßig aus
+  \item entscheide auf Basis von funktionierende Software
+  \item mach das, was gerade wichtig ist
+  \item halte den Code lesbar, erweiterbar und austauschbar
+  \item werde besser in der Erstellung von simplen, eindeutigen Scheiben von Funktionalitäten,
+    messe deinen Durchsatz
+\end{itemize}
+
+
+Wie kann man den empirischen Durchsatz messen:
+
+\begin{itemize}
+  \item messe die aktuelle \textbf{Lead Time}, die ein Task zur Fertigstellung braucht
+  \item messe den \textbf{Durchsatz}, d.h. wieviele Karten sind am Ende in einer Done Spalte
+  \item Verwende WIP (kann amn Anfang die Teamgröße sein)
+  \item nun kannst du \textbf{Littles Law} benutzen, um die durchschnittle Bearbeitungszeit zu
+    messen von einem Task n in der Queue verwenden (WIP + n / Durchsatz)
+  \item \uline{z.B.}
+    \begin{itemize}
+      \item Anzahl der Karten in einer Woche: 20, d.h. der Durchsatz ist 4 Karten pro Tag
+      \item Teamgröße ist zwei, d.h. WIP = 2
+      \item durchschnittliche Bearbeitungszeit ist (2 + 1 / 4) sind 0,75 Tage
+    \end{itemize}
+\end{itemize}
+\pagebreak
+
+
+\section{Retrospektiven richtig durchführen}
+\begin{itemize}
+  \item \textbf{Quintessenz}: Maßnahmen herausfinden, um die eigene Zusammenarbeit zu verbessern
+  \item der Inspect-Teil wird hierdurch ganz stark beschrieben
+  \item \textbf{Post-Mortem Retro}: macht man, nachdem ein Projekt vorbei ist, wie lief
+    Planung, Aufteilung, die Sprints
+  \item checkt am Start normalerweise die Ergebnisse der vorherigen Retro und guckt, ob die damals beschlossenen Aktionen abgeschlossen sind
+  \item alles, was bei der Retro auskommt, werden in kommenden Sprint umgesetzt
+  \item die Aktionen der Retro können ins Produktbacklog aufgenommen werden, damit Sie auch
+    umgesetzt werden können, Man sie auch schätzen und sie ans Board hängen, damit sie sichtbar sind
+  \item \textbf{Vorteile der Retro}
+    \begin{itemize}
+      \item Aktionen vom Team, für das Team $\Rightarrow$  Teams sind selbstorg. und haben die
+        Macht, ihren Arbeitsfluss zu ändern
+      \item der Inspect-Teil wird hierdurch ganz stark beschrieben
+      \item \textbf{Post-Mortem Retro}: macht man, nachdem ein Projekt vorbei ist, wie
+        lief Planung, Aufteilung, die Sprints
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Warum Retro durchführen}
+\begin{itemize}
+  \item Orgs müssen sich verbessern, um in Geschäft zu bleiben und um Kundennutzen
+    liefern
+  \item klassische Organisationsverbesserungen dauern lange und sind meistens ineffizient und
+    ineffektiv
+  \item wenn man mehr Kundennutzen liefern möchte, dann muss man die Art wie man arbeitet
+    $\Delta$ $\Rightarrow$  Retros helfen Probleme zu lösen und sich selbst zu verbessern
+  \item Retros werden vom Team gehalten und hilft Ihnen besser zu arbeiten, nicht der
+    Organisationen $\Rightarrow$ \enquote{Macht den Teams}, wo es auch hingehört
+  \item wenn Teams sich ermächtigt fühlen, dann bringen sich die Leute auch besser ein und haben weniger Hemmungen sich zu ändern
+  \item Teams einigen sich auf Veränderungen und sie leiten die Veränderungen auch eigenständig
+  \item wenn Teams ihre eigene Verbesserungen leiten, ist effektiver, schneller und günstiger als
+    wenn andere Teams und weitere Leute zwischen den Veränderungen stehen
+\end{itemize}
+
+
+\subsection{Struktur einer Retro}
+\begin{enumerate}
+  \item \uline{Setting the stage}:
+    \begin{Beschreibungfett}[Zweck]
+    \item [Zweck]
+      \begin{itemize}
+        \item Kontext und Fokus auf Ziel der Retro
+        \item neues Team braucht Vertrauensbasis (Security Check machen)
+        \item Arbeitsvereinbarungen und Verträge wie man sozial miteinander umgeht\footnote{(\uline{z.B.} Handys ausstellen)}
+      \end{itemize}
+    \item [Start]
+      \begin{itemize}
+        \item Leute willkommen heißen und für ihre Zeit bedanken
+        \item Retro-Ziel und Dauer benennen
+      \end{itemize}
+    \end{Beschreibungfett}
+  \item \uline{Gather data}:
+    \begin{Beschreibungfett}[Zweck]
+      \item [Zweck]
+        \begin{itemize}
+          \item Was ist passiert? Gutes und schlechtes sammeln\footnote{ohne das versuchen Individuen ihre eigenen Ansichten und Glaubensrichtungen zu verifizieren}
+          \item timeline (Arbeit, privates) sammeln
+        \end{itemize}
+      \item [Start]
+        \begin{itemize}
+          \item mit harten Fakten: Ereignisse\footnote{Meetings, Entscheidungspunkte, Meilensteine,
+              Feiern, Aneignung von neuen Technologien}, Metriken\footnote{Burndown-Charts, Velocity (Geschwindigkeitsmessungen), Anzahl der
+              geschafften Stories, Anzahl von überarbeiteten Code}, Feature und die Anzahl der
+            fertiggestellten Stories
+          \item ist die Retro für eine Stunde angesetzt, dann frage alle Leute in der Runde, um
+            über die Daten und Ereignisse nachzudenken\footnote{(harte Fakten helfen den Leuten
+              hoffentlich an ihre Gefühle zu denken $\Rightarrow$  gut für Konversationen)}
+          \item frag die Leute, dass sie sich die gesammelten Daten ansehen und Muster sowie
+            Änderungen und Überraschungen entdecken
+        \end{itemize}
+    \end{Beschreibungfett}
+    S. 10 im Buch erklärt das F Word: Frage die Leute in Retros nie, wie sie sich fühlen
+  \item \uline{Generate insights}:
+    \begin{Beschreibungfett}[Zweck]
+      \item [Zweck]
+        \begin{itemize}
+          \item Frage nach \enquote{Warum}\footnote{denke daran, wie man es anders machen kann}
+          \item erlaubt es dem Team einen Schritt zurückzugehen und das große Bild zu sehen
+          \item was bedeutet die Sache aus 2.? Team konsolidiert die Daten, um Stärken und
+            Probleme von den bisherigen Iterationen zu sammeln
+        \end{itemize}
+      \item [Start]
+        \begin{itemize}
+          \item begleite und führe das Team die Bedingungen\footnote{halte Ausschau nach Risiken und unerwarteten Ereignissen oder Ergebnissen}
+            zu untersuchen, Interaktionen und Muster zu erkennen, die an Ihren Erfolg teilgehabt haben
+          \item lösungs-orientiertes Denken: Zu allererst scheinen Ideen okay zu sein, aber
+            oftmals sind sie es nicht\footnote{versuche die Wurzel des Problems zu
+              entdecken und entscheide mit dem Team gemeinsam wie Ihr diese Sache angehen wollt}
+        \end{itemize}
+    \end{Beschreibungfett}
+  \item \uline{Decide what to do next}:
+    \begin{Beschreibungfett}[Zweck]
+      \item [Zweck]
+        \begin{itemize}
+          \item Cluster über Probs. bilden und welche 2-3 Maßnahmen im nächsten Sprint von wem angegangen werden sollen
+        \end{itemize}
+      \item [Start]
+        \begin{itemize}
+          \item wenn man viele Ideen hat, dann die heraussuchen, die das Team auch bis zur
+            nächsten Retro erledigen kann
+          \item wenn das Team aus einer Phase kommt, von der es sich erstmal erholen muss, dann
+            hilf dem Team einen weniger komplexen Task zu wählen
+          \item sehe zu, dass jeder Task ein persönliches Commitment hat, Leute nehmen an, dass es
+            das Team machen wird und dann macht es letzten Endes niemand im Team
+        \end{itemize}
+    \end{Beschreibungfett}
+  \item \uline{Checkout}:
+    \begin{Beschreibungfett}[Zweck]
+      \item [Zweck]
+        \begin{itemize}
+          \item Hilfe dem Team sich zu entscheiden, wie Sie die gelernten Erkenntnisse aus der
+            Retro behalten können
+        \end{itemize}
+      \item [Start]
+        \begin{itemize}
+          \item verfolge neue Taktiken mit Postern oder großen Sichtbaren Charts
+          \item mache Bilder $\Rightarrow$  die gelernten Sachen gehören dem Team
+          \item danke alle für die harte Arbeit, die Sie in den Sprint gesteckt haben
+          \item nimm dir Zeit, eine Retro der Retro zu machen
+        \end{itemize}
+    \end{Beschreibungfett}
+\end{enumerate}
+
+
+\subsection{Vorteile der Retro Struktur}
+\begin{itemize}
+  \item Meinungen der anderen verstehen
+  \item verständisvolle Sicht auf die vom Team verwendeten Arbeitsmethoden und Tools
+  \item Diskussion erlauben in die Richtung zu gehen, in der sie gehen sollen, ohne vorher
+    schon mit einen festen Ergebnis auszugehen
+  \item Struktur gibt dem Retroleiter ein Versuchset in die Hand, die dem Team beim \enquote{inspect and adapt} hilft
+\end{itemize}
+
+
+\subsection{Eine Retro leiten}
+\begin{itemize}
+  \item neben \textbf{kontext} auch den \textbf{Prozess} beachten
+  \item Prozess bedeutet: Aktivitäten, Gruppendynamiken und Zeit managen
+  \item du musst neutral im ganzen Prozess sein
+  \item führe Aktivitäten mit einer Vorlage ein, erkläre diese und warte für 10 Sekunden, wenn es
+    keine Fragen gibt, dann kannst du mit der Aktivität anfangen
+  \item wenn du doch aktiv in die Retro eintauchen willst, dann gib bescheid, dass du kurz
+    deinen Hut abnimmst, deine Meinung sagst und danach wieder die Retro-Rolle einnimmst
+  \item \ulbf{Aktivitäten managen}
+    \begin{itemize}
+      \item erkläre den Zweck jeder Aktivität
+      \item du musst für Fragen verfügbar sein und den Raum beobachten
+      \item debriefe jede Aktivität $\Rightarrow$  hilft dem Team die gesammelten Erfahrungen und
+        gewonnenen Erkenntnisse zu untersuchen, es macht eine konsequent Verbindung zu den neuen
+        Idee
+        \begin{enumerate}
+          \item Frage nach beobachteten Ereignissen und sensorischen Input: Was habt Ihr gesehen und
+            gehört?
+          \item Wie haben die Leute auf die Ereignisse reagiert: Was hat Euch überrascht, was hat
+            Euch herausgefordert?
+          \item Erkundige dich nach Einsichten und Analyse mit Fragen: Was hast du darüber gelernt, was
+          \item Erkundige dich nach Einsichten und Analyse mit Fragen: Was hast du darüber gelernt, was
+            sagt dir das über das Projekt aus $\Rightarrow$  solche Fragen helfen den Leuten, ihre
+          Ideen zu formulieren und die Aktivität zum Projekt zu verknüpfen
+        \item Nachdem die Verbindung zwischen Aktivität und Projekt erstellt ist, dann Frage die
+          Leute, wie Sie Ihre Einsichten verwenden können: Was ist ein Ding, was du verändern
+          würdest?
+        \end{enumerate}
+
+        $\Rightarrow$  folgt genau den gleichen Schema einer Retro (Daten Sammeln, Einsichten
+      erstellen und entscheide dann, was gemacht)
+      \item Debriefing sollte 50 - 100 Prozent Zeit der gemachten Aktivität betragen
+    \end{itemize}
+\end{itemize}
+
+
+\ulbfab{Gruppendynamik}
+
+\begin{itemize}
+  \item bedeutet Teilnahme
+  \item Leute, die reden wollen sollen auch Reden und Leute die zu dominant beim Reden sind,
+    müssen eingeschränkt werden
+  \item aktiviere Leute, die nicht so viel sprechen
+  \item Manager fühlen sich oft dazu in der Lage versetzt, leere zu füllen (sprich zu viel zu
+    reden) $\Rightarrow$  briefe den Manager vor dem Meeting und sage, dass die anderen zu erst
+  sprechen sollen
+  \item wie du dem Team helfen kannst, voranzukommen: Wie du die Kreativität zurück geben kannst
+    \begin{enumerate}
+      \item Was habt ihr zuvor schon mal probiert? Was ist dabei passiert? Was wollt ihr beim
+        nächsten Mal ändern, damit das nicht nochmal passiert?
+      \item Wenn wir die Änderung haben, was würdet ihr geben?
+      \item Habt Ihr schon jemals etwas anderes ausprobiert?
+    \end{enumerate}
+  \item achte auf \textit{Working Agreements} wenn du optionale Vereinbarungen akzeptierst, dann
+    erweckt es den Eindruck, dass die \textit{Working Agreements} ebenfalls optional ist
+  \item \textbf{Blame danger} \enquote{YOU} $\Rightarrow$  besser die ICH Sprache verwenden, denn dadurch
+  fokussiert man sich auf die Beobachtungen und Erfahrungen des Sprechers $\Rightarrow$  wenn du das
+  Verhalten von Leuten beschreibst, da  hat dies zur Folge, das Leute eine Pause einlegen und
+  darüber nachdenken, was sie gerade machen
+  \item wenn du \textit{blame} oder persönliche Kritik hörst, dann greif ein und lenke die
+    Diskussion auf den eigentlichen Inhalt
+  \item du musst dich mit emotionalen Interaktionen und Situationen herumschlagen
+  \item wenn Eklats die Regel sind, dann muss es ein größeres Problem geben, welches
+    du nicht lösen kannst $\Rightarrow$  sprich mit HR
+\end{itemize}
+
+
+\ulbfab{Wie man mit bestimmten Situationen am besten umgehen kann}
+
+
+\begin{itemize}
+  \item \textbf{Tränen}: Biete ein Taschentuch an, wenn die Person wieder sprechen kann, dann
+    frag nach, was mit der Person los ist. Stelle auch die Frage, ob die Person weiter an der
+    Retro mitmachen kann.
+  \item \textbf{schreien}: Wenn jemand schreit, dann ist die Reaktion der Leute so, dass sie
+    nicht mehr teilnehmen. Greif unmittelbar ein (Hand heben) und sag, dass die Person den
+    Sachverhalt nochmal erzählen kann, nur diesmal ohne zu schreien. Wenn auch das keine Lösung
+    ist, dann lege eine Pause ein und rede mit der aufgebrachten Person privat.
+  \item \textbf{stampfen, auftreten}: Frag das Team nach den Grund und frage, ob es möglich
+    ist, die Retro weiterzumachen, wenn dies häufiger mit der entsprechenden Person der Fall
+    ist, dann rede mit der Figur.
+  \item \textbf{Unangebrachtes Lachen und Herumalbern} Frag, warum das ab einen bestimmten Punkt
+    passiert.
+  \item \textbf{Unpassende Stille} Frage nachdem Grund für die Ruhe und ob die Gruppe müde ist
+    oder unsicher, wie man mit dem Thema weitermachen soll.
+\end{itemize}
+
+
+\subsubsection{Zeit managen}
+\begin{itemize}
+  \item nimm ein Zeitmessgerät (Pomodoro, Zeitmessuhr) mit und achte auf die Dauer der einzelnen Aktivitäten
+  \item wenn mehr als 8 Leute vertreten sind, dann verwende eine Glocke oder etwas
+    vergleichbares, um die Leute nach einem Event zusammenzutrommeln
+  \item rumschreien und Pfeifen bringt nix - besser Entenrufe, Kuhgeräusche
+  \item wenn die Gruppe voller Energie in einer Phase ist, dann frag, ob sie weitermachen
+    wollen und darauf hinweisen, dass die Endaktivität nicht erreicht wird
+\end{itemize}
+
+
+\subsubsection{Dich managen}
+\begin{itemize}
+  \item verstehe und manage deine Gefühlslage ist der Schlüssel zum Managen von Gruppendynamik
+  \item wenn du Angst hast oder sich Spannung aufbaut, dann atme tief durch, mach eine Pause
+    wenn es notwendig ist. Angst ist ein Zeichen, dass du nicht genau weißt, was du als
+    nächstes machen musst
+  \item erinnere dich daran, dass du nicht für die Emotionen im Raum verantwortlich
+    bist und es liegt nicht in deiner Verantwortung, dass alles und jeder glücklich und nett ist
+  \item wenn du Angst hast, dann ist der Blutfluss zu deinem Gehirn gestört, wodurch du nicht
+    klar denken kannst, was dann zu noch mehr Angst führt. Wenn dein Gehirn wieder mit
+    Sauerstoff versorgt ist, dann stell dir folgende Fragen:
+    \begin{enumerate}
+      \item Was ist gerade passiert?
+      \item Wieviel von mir war in mir und wieviel von mir was außerhalb von mir?
+      \item Wie ist die Gruppe in die Situation gekommen?
+      \item Wo muss die Gruppe als nächstes hingehen?
+      \item Was sind meine drei Optionen für den nächsten Schritt?
+      \item Was bietet ich der Gruppe an?
+    \end{enumerate}
+\end{itemize}
+
+
+\subsection{Business Value von Retros}
+\begin{itemize}
+  \item dadurch, das Teams besser werden wird auch dessen Wert für den Kunden und der Org
+    besser
+  \item das kann die Org schneller, effizienter und innovativer machen
+  \item hier nun einige Sachen wie man den Geschäftsnutzen in Retros verbessern kann:
+    \begin{itemize}
+      \item halte Actions Ausschau, die das Team auch ändern kann
+      \item Fokus auf Lernen und Verstehen statt blaming
+      \item Begrenze die Anzahl an Issues, die man in der Retro untersuchen will
+      \item machen root cause analyse um die Ursachen und nicht die Symptome zu finden
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Voraussetzungen für Retros}
+\ulbfab{Bedürfnis nach diesem Ritual}
+
+\begin{itemize}
+  \item Leute halten normalerweise während eines Projektes nicht an, um zu reflektieren
+  \item ein Ritual bringt Leute zusammen, um sich auf das wichtigste zu konzentrieren und um
+    Erreichtes zu würdigen
+  \item keine Limits, wie viele Teilnehmen wollen und es ist gut die Sichtweisen der anderen zu
+    sehen
+\end{itemize}
+
+
+\ulbfab{Dem Prozess einen Namen geben}
+
+\begin{itemize}
+  \item andere Namen sind \textbf{postmortem}, \textbf{post partum}, \textbf{post-engagement}
+  \item klarer Name hilft, dass jeder im und außerhalb des Prozesses das Metting verstehen kann
+\end{itemize}
+
+
+\ulbfab{Kernaufgabe der Retro}: Zustand der Sicherheit\footnote{denn nur dann fühlen sich die Leute in der Lage, ihre Probleme, Meinungen und Bedenken zu äußern}
+
+
+\ulbfab{Die dunklen Seite der Retro vermeiden}
+
+\begin{itemize}
+  \item es gibt auch manchmal \textit{Complain Sessions}, aber man muss darauf achten, dass das nicht
+    außer Kontrolle gerät, d.h. wenn sich der Empfänger der Kritik getroffen wird und sofort in den
+    Verteidungsmodus geht und zum Gegenschlag ausholt
+  \item man kann es vermeiden, in dem man Wünsche anstelle von Beschuldigungen äußert
+\end{itemize}
+
+
+\subsection{Retro von Retros}
+
+\begin{itemize}
+  \item mehrere Teams arbeiten am selben Produkt und jedes Team hat sein Retros $\Rightarrow$  es
+  kann gut sein, wenn alle Teams ihre gelernten Sachen miteinander teilen
+  \item RoR kann die Zusammenarbeit zwischen den Teams und ihre Projektteilnahme erhöhen
+  \item Risiken behandeln, Produktqualität steigern, es kann auch die Chance erhöhen, brauchbare
+    Funktionen schnell und kontinuierlich auszuliefern
+\end{itemize}
+
+
+\subsection{Aktivitäten für Setting the stage}
+\subsubsection{Check-In}
+\begin{Beschreibungfett}[Beschreibung]
+  \item [Dauer] 5 - 10 Minuten $\Rightarrow$  sind gut für eine normale Retro
+  \item [Beschreibung] Nachdem du alle willkommen geheißen hast und das Ziel der Retro besprochen hast, stellt der Retroleiter eine zentrale Frage
+  \item [Zweck] erfahre was sich die Leute von der Retro erhoffen
+  \item [Schritte]
+    \begin{itemize}
+      \item Stelle eine Frage, die jeder mit einem Wort oder in einem Satz beantworten kann
+        \begin{itemize}
+          \item Was ist das Wort, was am besten das beschreibst, was du von dieser Retro
+            erwartest?
+          \item In ein oder zwei Worten, was sind deine Hoffnungen von dieser Retro?
+          \item Was ist eine Stelle, due du gerade im Kopf hast
+          \item Wenn du in die Retro kommst, was für ein Auto würdest du sein?
+        \end{itemize}
+      \item es ist okay, wenn manche Leute keine Antworten auf die Fragen haben und den Ball
+        einfach weitergeben
+      \item gehe nach und nach jede Person durch und höre dir jede Antwort an
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsubsection{Focus On und Focus Off}
+\begin{Beschreibungfett}[Beschreibung]
+  \item [Dauer] 8 - 12 Minuten $\Rightarrow$  gut für eine normale Retro
+  \item [Beschreibung] Alle willkommen heißen und danach beschreibt der Retroleiter
+  produktive und unproduktive Kommunikationsmuster. Nachdem die Muster erklärt wurden,
+  diskutieren die Teilnehmer über die entsprechenden Inhalte
+\item [Zweck] Hilft beim Aufbau eines gemeinsamen Verständnis für gute Kommunikation. Es
+  hilft den Teilnehmern Vorwürfe und Vorurteile Beiseite zu legen und auch die Angst davor zu
+  verlieren.
+  \item [Schritte]
+    \begin{itemize}
+      \item stelle das Poster mit den entsprechenden Aussagen auf und erkläre es.
+      \item bilde Gruppen von weniger als 4 Leuten die sollen die Aussage definieren und erklären
+      \item frag jede Gruppe was die beiden Wörter bedeuten und welche Verhaltensweisen dahinter
+        verbirgt\footnote{Sie sollen erklären, wie jedes davon Einfluss auf das Team und die Retro
+          hat}
+      \item jede Gruppe stellt Ihre Ergebnisse dem ganzen Team vor
+      \item frage die Leute, ob sie sich eher in der linken oder rechten Spalte sehen
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsubsection{ESVP}
+\begin{Beschreibungfett}[Beschreibung]
+\item [Dauer] 10 - 15 Minuten - gut in einer langen Iteration, Release und
+    Projekt-Retro
+  \item [Beschreibung] Jeder Teilnehmer teilt anonym seine Einstellung zur Retro als
+    Explorer, Shopper, Vacationer oder Prisoner fest. Der Retroleiter fest die Ergebnisse als
+    Graphik zusammen und führt dann eine Diskussion, was die Ergebnisse für die Gruppe bedeuten
+  \item [Zweck] Fokus der Leute auf die Retro und verstehe die Einstellungen der Leute
+    zur Retro
+  \item [Schritte]
+    \begin{itemize}
+      \item Erkläre, dass du eine Umfrage durchführen wirst, um zu lernen, wie die
+        Erwartungshaltung der Leute an die Retro ist
+      \item Zeige die Flipchart und erkläre die einzelnen Personengruppen:
+        \begin{itemize}
+          \item \textbf{Explorers}: sind eifrig neue Ideen und Einsichten zu erlangen; Sie
+            willen alles was sie können über die Iteration, Release, Projekt erfahren
+          \item \textbf{Shoppers}: Gucken sich alle Verfügbaren Informationen an und sind froh,
+            wenn sie mit einer guten Idee heimgehen
+          \item \textbf{Vacationers}: Sind nicht an der Retro interessiert, sind aber früh von der
+            täglichen Schinderei weg zu sein. Manchmal sind sie aufmerksam, aber sie sind froh
+            nicht mehr im Office zu sein
+          \item \textbf{Prisoner}: Fühlen sich zur Retro gedrängt und würden liebend gerne
+            etwas anderes machen
+        \end{itemize}
+      \item verteile Karten, auf dem jeder seine Rolle einträgt
+      \item erinnere die Leute daran fertig zu werden und ihre Zettel zu falten und sie
+        geschüttelt unsichtbar in eine Tombola zu werfen
+      \item frag einen der Teilnehmer einen Strich im Histogram für jeden Eintrag zu
+        machen\footnote{Pack die vorgelesenen Zettel weg und schmeißt sie weg, so dass es anonym
+          ist}
+      \item frage, was die Leute mit den Daten machen wollen\footnote{führe anschließend
+          eine Diskussion
+          wie die Einstellungen Einfluss auf die Retro haben werden}
+      \item \textit{Abschlussbesprechung}: Was für einen Einfluss haben diese Einstellungen auf unsere
+        tägliche Arbeit?
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsubsection{Working Agreements}
+\begin{Beschreibungfett}[Beschreibung]
+  \item [Dauer] 10 - 30 Minuten - gut in einer langen Iteration, Release und
+    Projekt-Retro
+  \item [Beschreibung] Leute arbeiten zusammen um Ideen für effektives Verhalten zu
+    erhalten, bei dem sie fünf bis sieben Vereinbarungen treffen können
+  \item [Zweck] Verhaltensweisen etablieren, welche das Team in produktive Diskussionen unterstützt
+  \item [Schritte]
+    \begin{itemize}
+      \item \enquote{Wir erarbeiten in dieser Aktivität eine Menge an Working Agreements, so dass wir
+        festhalten, nach welchen Vereinbarungen wir zusammenarbeiten. Jeder hat die Aufgabe die
+        Einhaltung der Regeln zu begutachten und sollten diese Fehler versetzt werden, dann
+        soll das Team auf diese Verletzung aufmerksam gemacht werden. Die Vereinbarungen helfen uns
+        bei der Retro.}
+      \item bilde kleine Gruppen mit nicht mehr als 4 Leute
+      \item jede Gruppe soll 3 - 5 Working Agreements erstellen
+      \item in Round-Robin Manier soll jede Gruppe Ihre Vereinbarungen auf ein Flipchart
+        schreiben
+      \item erkläre der Gruppe, dass sie 3 - 7 Agreements auswählen sollen
+      \item sollte es zu viele Vereinbarungen geben, dann müssen die Agreements priorisiert
+        werden
+      \item wenn es weniger als drei Agreements gilt, dann soll demokratisch abgestimmt werden:
+        Daumen hoch (stimme zu), Daumen seitlich (Ich unterstütze den Willen der Gruppe),
+        Daumen runter (lehne ab)
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsection{Aktivitäten für Gathering Data}
+
+
+\subsubsection{Timeline}
+\begin{Beschreibungfett}[Beschreibung]
+  \item [Dauer] 30 - 90 Minuten, längere Iteration und Projekt-Release
+  \item [Beschreibung] Leute schreiben ihre Ideen, persönliche Erlebnisse und andere
+    signifikante Erlebnisse auf Karten, welche während einer Iteration, Release oder Projekt
+    passiert.
+  \item [Zweck] Simuliere Erinnerungen was geschehen ist während und außerhalb der
+    Arbeit. $\Rightarrow$  Erstelle ein Bild von der Arbeit von verschiedenen Parameter
+  $\Rightarrow$  erkenne Muster, wann sich die Energie-Level geändert haben
+  \item [Schritte]
+    \begin{itemize}
+      \item \enquote{Wir werden eine Zeitleiste erstellen, um ein ganzes Bild über die gesamten
+        Situation zu erfahren. Wir wollen die Ereignisse aus mögliche verschiedene Perspektiven.}
+      \item splitte die Gruppe mit Leuten mit nicht mehr als 5 Leute (Affinitätsgruppen),
+        verteile Stifte, Index-Karten und Sticky Notes
+      \item frage die Leute, dass Sie sich zurücklehnen sollen und sich die
+        Iterationen/Releases/Projekt genannt werden sollen\footnote{erfasse jede erinnerungswürdige,
+        persönliche Erfahrungen}
+      \item achte auf den Level der Aktivität: Wenn nix mehr geschieht, dann ist es vorbei,
+        wenn nach einer gewissen Zeit noch nix gekommen ist, dann informiere dich bei den
+        Leuten ob du Ihnen helfen kannst
+      \item wenn alle Karten auf die Wand gepostet wurden, dann sollen alle darüber nochmal
+        einen Blick werfen. Es ist okay, wenn die Leute noch neue Karten posten
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsubsection{Triple Nickels}
+\begin{Beschreibungfett}[Beschreibung]
+  \item [Dauer] 30 - 60 Minuten, verwende dies bei der Datensammlung oder als Teil von \enquote{Was als nächstes gemacht werden sollen}
+  \item [Beschreibung] ...
+  \item [Zweck] Erstelle Ideen für Aktionen oder Vorschläge. Decke unwichtige Themen zum
+    Projekt-Geschehen auf
+  \item [Schritte]
+    \begin{itemize}
+      \item \enquote{Ziel des Meetings ist es so viele Ideen wie möglich zum Thema XXX zu sammeln}
+      \item bilde Gruppen von nicht mehr als 5 Leuten in Gruppen und erinnere Leute daran auf dem
+        Papier leserlich zu schreiben, so dass auch andere Team-Leute die Informationen lesen
+        können
+      \item erkläre den Ablauf: In der ersten Runde hat jede Person 5 Minuten Zeit, um Ideen zum
+        Thema XXX niederzuschreiben. Ziel sollen mindestens 5 Ideen auf den Zettel sein. Für die
+        nächste Runde sollen weitere Ideen aufbauend auf den Ideen sein, die bereits auf den
+        Zettel sind
+      \item nach zehn Minuten gib ein Signal und sag den Leuten, dass sie das Papier an die
+        Person rechts weitergeben sollen und dann vorlesen sollen
+      \item Debrief die Aktivität: Was habt Ihr festgestellt, während Ihr die Ideen geschrieben
+        habt? Was hat Euch dabei überrascht? Würden Eure Erwartungen erfüllt? Wie wurden die
+        Erwartungen erfüllt? Was fehlt auf der List? Welche Themen und Ideen sollen weiter
+        untersucht werden?
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsubsection{Color Code Dots}
+\begin{Beschreibungfett}[Beschreibung]
+  \item [Dauer] 5 - 20 Minuten, gut in Verbindung in der Timeline um Daten über
+    Meinung in einer längeren Iteration, Release oder Projekt-Retro
+  \item [Beschreibung] Leute benutzen Punkte, um auf der Timeline Hochs und Tiefs zu
+    markieren
+  \item [Zweck] Zeigt wie Leute bestimmte Ereignisse auf der Timeline erlebt haben
+  \item [Schritte]
+    \begin{itemize}
+      \item \enquote{Nachdem alle Events in der Timeline dargestellt und von allen angesehen wurden, ist es
+          an der Zeit, die Ereignisse herauszufiltern, bei dem die Energie hoch und niedrig war}
+      \item jeder der Teilnehmer bekommt zwei Klebepunkte in zwei Farben; Erkläre welche Farbe für hohe Energie und
+        welche für niedrige Energie steht
+      \item Nun soll jede Person die Punkte setzten, wo ein hoher Energielevel war und wo es langsam abflachte
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsubsection{Mad Sad Glad}
+\begin{Beschreibungfett}[Beschreibung]
+  \item [Dauer] 20 - 30 Minuten, sammle Daten über Gefühle während einer Iteration,
+    Release oder Projektretro
+  \item [Beschreibung] Leute benutzen farblich unterschiedliche Karten, um Zeiten zu beschreiben, wo sie Mad, Sad oder Glad waren
+  \item [Zweck] Die Gefühlten Fakten sollen auf den Tisch gepackt werden
+  \item [Schritte]
+    \begin{itemize}
+      \item \enquote{Lasst uns gemeinsam sehen, wie wir uns während des Projektes
+          gefühlt haben und vielleicht können wir Quellen entdecken, bei den wir zufrieden und
+          unzufrieden waren.}
+      \item erkläre das Poster mit den Labeling Mad, Sad und Glad; hab einen Stapel mit
+        farblichen Post-Its und Stiften für alle greifbar zur Hand
+      \item erkläre, dass ihr x Minuten Zeit habt, um die Zeiten/Ereignisse niederzuschreiben, wo
+        ihr Euch Glad, Sad oder Mad während des Projekts, Iteration gefühlt habt; schreibt auf jede Karte ein Event
+    \end{itemize}
+\end{Beschreibungfett}
+
+
+\subsection{Weitere Aktivitäten-Ideen}
+
+
+\subsubsection{Talk Team-Driven Improvement with Retrospectives}
+\begin{itemize}
+  \item Male deine eigenes Gutes Schiff (Team oder Firmenname)
+    \begin{itemize}
+      \item Was gibt uns Wind in den Segeln?
+      \item Welcher Ankor hält uns zurück?
+      \item Nach welchen Möglichkeiten gucken wir?
+      \item Welche Gefahren gibt es?
+    \end{itemize}
+  \item Male deinen Superhelden:
+    \begin{itemize}
+      \item Arbeite in Paare und male dein Team oder Firma als ein Cartoon Superheld
+        \begin{itemize}
+          \item Super powers?
+          \item Schwachpunkte?
+          \item Welche Kumpanen brauchen wir?
+        \end{itemize}
+    \end{itemize}
+  \item Quadranten:
+    \begin{itemize}
+      \item Wohin geht unsere Zeit? Vertikale Achse ist Spaß, horizontale Achse welche Zeit es
+        genommen hat. Nimm ein Thema pro Quadranten.
+    \end{itemize}
+  \item Thinking hats:
+    \begin{itemize}
+      \item schwarz: vorsichtig
+      \item weiss: Fakten
+      \item blau: Prozess
+      \item rot: Emotionen
+      \item grün: Kreativität
+      \item gelb: Vorteile
+    \end{itemize}
+  \item Emotions-Graph: Horizontale Achse ist Zeit, vertikale Achse ist Glücklichkeit
+  \item Star Fisch: Stop, Start, More, Keep, Less
+  \item Futurespective: Denke an Sprint + 1 und der war ein Erfolg. Warum ist der so erfolgreich
+    geworden?
+  \item Appreciations (Arbeit und Beteiligung loben) and Commiserations (Mitleid, Mitgefühl, gut
+    dass du es gemacht hast, aber du musst es nicht jedesmal machen)
+  \item Feedback Form: Anonym machen, dann wählen es mehr Leute aus, man kann z.B. Fragen ob Zeit
+    gut genutzt wurde, Textfeld mit wertvollen Feedback, hat die Retro Einfluss gehabt, wie
+    fandet Ihr die folgende Aktivität
+\end{itemize}
+
+
+\subsection{Referenzen}
+\begin{itemize}
+  \item \href{http://retrospectives.com/}{retrospectives.com} - einige gute Sachen
+  \item
+    \href{http://xp123.com/articles/patterns-for-iteration-retrospectives/}{xp123.com} - viele
+    gute Ideen
+  \item \href{http://plans-for-retrospectives.com}{retromat}
+  \item \href{https://www.scrumalliance.org/why-scrum/core-scrum-values-roles}{core scrum}
+\end{itemize}
+\pagebreak
+
+
+\section{Scrum Test}
+
+\begin{itemize}
+  \item Fragen: \url{http://scrumsource.com/scrumexams.php}, \url{https://www.scrum.org/Assessments/Open-Assessments}
+  \item Videos: \url{http://www.collab.net/services/training/agile_e-learning}
+  \item weitere Folien: \url{http://scrumtrainingseries.com/}
+\end{itemize}
+
+
+\subsection{The Product Backlog is ordered by:}
+\begin{enumerate}[A)]
+  \item Small items at the top to large items at the bottom.
+  \item Safer items at the top to riskier items at the bottom.
+  \item Least valuable items at the top to most valuable at the bottom.
+  \item Items are randomly arranged.
+  \item Whatever is deemed most appropriate by the Product Owner.
+\end{enumerate}
+
+
+\textbf{Solution}: E
+
+
+\subsection{The three pillars of empirical process control are:}
+\begin{enumerate}[A)]
+  \item Respect For People, Kaizen, Eliminating Waste
+  \item Planning, Demonstration, Retrospective
+  \item Inspection, Transparency, Adaptation
+  \item Planning, Inspection, Adaptation
+  \item Transparency, Eliminating Waste, Kaizen
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{It is mandatory that the product increment be released to production at the end of each Sprint.}
+\begin{enumerate}[A)]
+  \item true
+  \item false
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Who should know the most about the progress toward a business objective or a
+  release, and be able to explain the alternatives most clearly?}
+\begin{enumerate}[A)]
+  \item The Product Owner.
+  \item The Development Team.
+  \item The Scrum Master.
+  \item The Project Manager.
+\end{enumerate}
+
+
+\textbf{Solution}: A:
+
+
+\subsection{Which two (2) things does the Development Team not do during the first Sprint?}
+\begin{enumerate}[A)]
+  \item Deliver an increment of potentially shippable functionality.
+  \item Nail down the complete architecture and infrastructure.
+  \item Develop and deliver at least one piece of functionality.
+  \item Develop a plan for the rest of the project.
+\end{enumerate}
+
+
+\textbf{Solution}: B, D
+
+
+\subsection{Who is on the Scrum Team?}
+
+\begin{enumerate}[A)]
+  \item The Scrum Master
+  \item The Product Owner
+  \item The Development Team
+  \item Project Manager
+  \item None of the above
+\end{enumerate}
+
+
+\textbf{Solution}: A, B, C
+
+
+\subsection{Scrum Master is a \enquote{management} position?}
+\begin{enumerate}[A)]
+  \item true
+  \item false
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{The Development Team should have all the skills needed to}
+\begin{enumerate}[A)]
+  \item Complete the project as estimated when the date and cost are committed to the Product Owner.
+  \item Do all of the development work, but not the types of testing that require specialized testing, tools, and environments.
+  \item Turn the Product Backlog items it selects into an increment of potentially shippable product functionality.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{An optimal Development Team has at least 5 members}
+\begin{enumerate}[A)]
+  \item To have enough coverage in case of illness or emergency
+  \item To ensure high productivity
+  \item To increase the reliability of their estimates
+  \item This is not required as long as the overall team maturity is high
+  \item This is not required in Scrum.
+\end{enumerate}
+
+
+\textbf{Solution}: E
+
+
+\subsection{When multiple teams are working together, each team should maintain a separate Product Backlog.}
+\begin{enumerate}[A)]
+  \item true
+  \item false
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is the recommended size for a Development Team (within the Scrum Team)?}
+\begin{enumerate}[A)]
+  \item Minimal 7
+  \item 3 to 9
+  \item 7 plus or minus 2
+  \item 9
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{When many Development Teams are working on a single product, what best describes the definition of \enquote{done}?}
+\begin{enumerate}[A)]
+  \item Each Development Team defines and uses its own. The differences are discussed and reconciled during a hardening Sprint.
+  \item Each Development Team uses its own but must make their definition clear to all other Teams so the differences are known.
+  \item All Development Teams must have a definition of \enquote{done} that makes their combined work potentially releasable.
+  \item It depends.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{When does the next Sprint begin?}
+\begin{enumerate}[A)]
+  \item Next Monday.
+  \item Immediately following the next Sprint Planning.
+  \item When the Product Owner is ready.
+  \item Immediately after the conclusion of the previous Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Which statement best describes the Sprint Review?}
+\begin{enumerate}[A)]
+  \item It is a review of the team's activities during the Sprint.
+  \item It is when the Scrum Team and stakeholders inspect the outcome of the Sprint and figure out what to do in the upcoming Sprint.
+  \item It is a demo at the end of the Sprint for everyone in the organization to provide feedback on the work done.
+  \item It is used to congratulate the Development Team if it did what it committed to doing, or to punish the Development Team if it failed to meet its commitments.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Development Team members volunteer to own a Sprint Backlog item:}
+\begin{enumerate}[A)]
+  \item At the Sprint planning meeting.
+  \item Never. All Sprint Backlog Items are \enquote{owned} by the entire Development Team, even though each one may be done by an individual development team member.
+  \item Whenever a team member can accommodate more work.
+  \item During the Daily Scrum.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{When is a Sprint over?}
+\begin{enumerate}[A)]
+  \item When all Product Backlog items meet their definition of done.
+  \item When the Product Owner says it is done.
+  \item When all the tasks are completed.
+  \item When the timebox expires.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What does it mean to say that an event has a timebox?}
+\begin{enumerate}[A)]
+  \item The event must happen at a set time.
+  \item The event must happen by a given time.
+  \item The event must take at least a minimum amount of time.
+  \item The event can take no more than a maximum amount of time.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What is the primary way a Scrum Master keeps a Development Team working at its highest level of productivity?}
+\begin{enumerate}[A)]
+  \item By facilitating Development Team decisions and removing impediments.
+  \item By ensuring the meetings start and end at the proper time.
+  \item By preventing changes to the backlogs once the Sprint begins.
+  \item By keeping high value features high in the Product Backlog.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Who is required to attend the Daily Scrum?}
+\begin{enumerate}[A)]
+  \item The Development Team.
+  \item The Scrum team.
+  \item The Development Team and Scrum Master.
+  \item The Development Team and Product Owner.
+  \item The Scrum Master and Product Owner.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Who has the final say on the order of the Product Backlog?}
+\begin{enumerate}[A)]
+  \item The Stakeholders
+  \item The Development Team
+  \item The Scrum Master
+  \item The Product Owner
+  \item The CEO
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Development Team membership should change:}
+\begin{enumerate}[A)]
+  \item Every Sprint to promote shared learning.
+  \item Never, because it reduces productivity.
+  \item As needed, while taking into account a short term reduction in productivity.
+  \item Just as it would on any development team, with no special allowance for changes in productivity.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Which statement best describes Scrum?}
+\begin{enumerate}[A)]
+  \item A complete methodology that defines how to develop software.
+  \item A cookbook that defines best practices for software development.
+  \item A framework within which complex products in complex environments are developed.
+  \item A defined and predictive process that conforms to the principles of Scientific Management.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{The CEO asks the Development Team to add a \enquote{very important} item to the current Sprint. What should the Development Team do?}
+\begin{enumerate}[A)]
+  \item Add the item to the current Sprint without any adjustments.
+  \item Add the item to the current Sprint and drop an item of equal size.
+  \item Add the item to the next Sprint.
+  \item Inform the Product Owner so he/she can work with the CEO.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Which of the below are roles on a Scrum Team?}
+\begin{enumerate}[A)]
+  \item Development Team
+  \item Users
+  \item Customers
+  \item Product Owner
+  \item Scrum Master
+\end{enumerate}
+
+
+\textbf{Solution}: A, D, E
+
+
+\subsection{Upon what type of process control is Scrum based?}
+\begin{enumerate}[A)]
+  \item Empirical
+  \item Hybrid
+  \item Defined
+  \item Complex
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Scrum does not have a role called \enquote{project manager}.}
+\begin{enumerate}[A)]
+  \item true
+  \item false
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Which statement best describes a Product Owner's responsibility?}
+\begin{enumerate}[A)]
+  \item Optimizing the value of the work the Development Team does.
+  \item Directing the Development Team.
+  \item Managing the project and ensuring that the work meets the commitments to the stakeholders.
+  \item Keeping stakeholders at bay.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{An abnormal termination of a Sprint is called when?}
+\begin{enumerate}[A)]
+  \item When it is clear at the end of a Sprint that everything won't be finished.
+  \item When the Team feels that the work is too hard.
+  \item When Sales has an important opportunity.
+  \item When the Product Owner determines that it makes no sense to finish it.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What is the main reason for the Scrum Master to be at the Daily Scrum?}
+\begin{enumerate}[A)]
+  \item To make sure every team member answers the three questions in the right team member order.
+  \item He or she does not have to be there; he or she only has to ensure the Development Team has a Daily Scrum.
+  \item To write down any changes to the Sprint Backlog, including adding new items, and tracking progress on the burndown.
+  \item To gather status and progress information to report to management.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is the maximum length of a Sprint?}
+\begin{enumerate}[A)]
+  \item Not so long that the risk is unacceptable to the Product Owner.
+  \item Not so long that other business events can't be readily synchronized with the development work.
+  \item No more than one calendar month.
+  \item All of these answers are correct.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{How much work must a Development Team do to a Product Backlog item it selects for a Sprint?}
+\begin{enumerate}[A)]
+  \item As much as it has told the Product Owner will be done for every Product Backlog item it selects in conformance with the definition of done.
+  \item As much as it can fit into the Sprint.
+  \item The best it can do given that it is usually impossible for QA to finish all of the testing that is needed to prove shippability.
+  \item Analysis, design, programming, testing and documentation.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{The Development Team should not be interrupted during the Sprint. The Sprint Goal should remain intact. These are conditions that foster creativity, quality and productivity. Based on this, which of the following is false?}
+\begin{enumerate}[A)]
+  \item The Product Owner can help clarify or optimize the Sprint when asked by the Development Team.
+  \item The Sprint Backlog and its contents are fully formulated in the Sprint Planning meeting and do not change during the Sprint.
+  \item As a decomposition of the selected Product Backlog Items, the Sprint Backlog changes and may grow as the work emerges.
+  \item The Development Team may work with the Product Owner to remove or add work if it finds it has more or less capacity than it expected.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{It is mandatory that the product increment be released to production at the end of each Sprint.}
+\begin{enumerate}[A)]
+  \item True
+  \item False
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Who is responsible for registering the work estimates during a Sprint?}
+\begin{enumerate}[A)]
+  \item The Development Team.
+  \item The Scrum Master.
+  \item The Product Owner.
+  \item The most junior member of the Team.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{An organization has decided to adopt Scrum, but management wants to change the terminology to fit with terminology already used. What will likely happen if this is done?}
+\begin{enumerate}[A)]
+  \item Without a new vocabulary as a reminder of the change, very little change may actually happen.
+  \item The organization may not understand what has changed with Scrum and the benefits of Scrum may be lost.
+  \item Management may feel less anxious.
+  \item All answers apply.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{The timebox for a Daily Scrum is?}
+\begin{enumerate}[A)]
+  \item The same time of day every day.
+  \item Two minutes per person.
+  \item 4 hours.
+  \item 15 minutes.
+  \item 15 minutes for a 4 week sprint. For shorter Sprints it is usually shorter.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{The timebox for the complete Sprint Planning meeting is?}
+\begin{enumerate}[A)]
+  \item 4 hours.
+  \item 8 hours for a monthly Sprint. For shorter Sprints it is usually shorter.
+  \item Whenever it is done.
+  \item Monthly.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{The purpose of a Sprint is to have a working increment of product done before the Sprint Review.}
+\begin{enumerate}[A)]
+  \item True
+  \item False
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{The Development Team should have all the skills needed to:}
+\begin{enumerate}[A)]
+  \item Complete the project as estimated when the date and cost are committed to the Product Owner.
+  \item Do all of the development work, but not the types of testing that require specialized testing, tools, and environments.
+  \item Turn the Product Backlog items it selects into an increment of potentially shippable product functionality.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Why is the Daily Scrum held at the same time and same place?}
+\begin{enumerate}[A)]
+  \item The place can be named.
+  \item The consistency reduces complexity and overhead.
+  \item The Product Owner demands it.
+  \item Rooms are hard to book and this lets it be booked in advance.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{The maximum length of the Sprint Review (its timebox) is:}
+\begin{enumerate}[A)]
+  \item 2 hours.
+  \item 4 hours for a monthly Sprint. For shorter Sprints it is usually shorter.
+  \item As long as needed.
+  \item 1 day.
+  \item 4 hours and longer as needed.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{During the Daily Scrum, the Scrum Master's role is to:}
+\begin{enumerate}[A)]
+  \item Lead the discussions of the Development Team.
+  \item Make sure that all 3 questions have been answered.
+  \item Manage the meeting in a way that each team member has a chance to speak.
+  \item Teach the Development Team to keep the Daily Scrum within the 15 minute timebox.
+  \item All of the above.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What is the role of Management in Scrum?}
+\begin{enumerate}[A)]
+  \item To continually monitor staffing levels of the Development Team.
+  \item To monitor the Development Team's productivity.
+  \item Management supports the Product Owner with insights and information into high value product and system capabilities. Management supports the Scrum Master to cause organizational change that fosters empiricism, self-organization, bottom-up intelligence, and intelligent release of software.
+  \item To identify and remove people that aren't working hard enough.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{What is more important objective of the Backlog Refinement Meeting?}
+\begin{enumerate}[A)]
+  \item To get precise estimates.
+  \item To get a better understanding of upcoming work and combine it to from larger PBIs.
+  \item To get better understanding of upcoming work and split it to from smaller PBIs.
+  \item To get a better understanding of upcoming work and create a monolithic detailed
+    design document.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{What's the difference between acceptance criteria and definition of done?}
+\begin{enumerate}[A)]
+  \item There's no difference
+  \item Definition of done applies globally to all PBIs for a product, while acceptance
+    criteria pertain to specific items. Acceptance criteria could also from the basis of new
+    stories.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What's the difference between the Product Backlog and the Sprint Backlog?}
+\begin{enumerate}[A)]
+  \item There is no difference.
+  \item The Product Backlog contains features, while the Sprint Backlog contains bugs.
+  \item The Product Backlog contains everything we might ever work on, while the Sprint Backlog
+    contains just the things we'll work on during one Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Should the team expect to know all the tasks necessary to complete the committed PBIs during the Sprint Planning Meeting?}
+\begin{enumerate}[A)]
+  \item No. According to \textit{Agile Project Management with Scrum} (Schwaber 2004), only 60$\%$ of
+    the tasks are likely to be identified during the Sprint Planning Meeting. Other tasks,
+    such as unanticipated dependencies, will be discovered during Sprint Execution.
+  \item Yes. The most important thing is to make sure everyone is busy every hour of the entire
+    Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{What is the longest allowable iteration, or Sprint, in Scrum?}
+\begin{enumerate}[A)]
+  \item 30 days, or one calendar month, but one or two weeks is recommended.
+  \item Six weeks.
+  \item It depends how much fork was committed to the Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{In Scrum, is it acceptable to postpone testing until another Sprint?}
+\begin{enumerate}[A)]
+  \item No. In Scrum teams attempt to build a potentially shippable product increment every Sprint.
+  \item Yes. We canot learn how to code and test in one Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{How can one Scrum team builda potentally shippable product increment within one Sprint? (Chose six)}
+\begin{enumerate}[A)]
+  \item By using modern software engineering approaches such as test-driven development (TDD), continous design, continuous integration, merciless refactoring.
+  \item They cannot do it. It's too difficult to code and test in one Sprint.
+  \item By improved collaboration techniques: pair programming, working in a team room, and eliminating \enquote{over the wall} hand offs.
+  \item By checking code in multiple times per day, and by reducing or eliminating branches in the version control system.
+  \item By organizing teams around features rather than architectural components.
+  \item By full-time allocation to one team, focusing on only one set of Sprint goals.
+  \item By agreeing to a smaller amount of feature scope at the Sprint Planning Meeting, allowing more time for integration, testing, and fixing during each Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: A, C, D, E ,F, G:
+
+
+\subsection{A 30-day Sprint uses a 1-day timebox for the Sprint Planning Meeting. How long should the Sprint Planning Meeting be for a two-week Sprint?}
+\begin{enumerate}[A)]
+  \item A 4 hours maxiumum.
+  \item 1 day maxium.
+  \item 1 hour maxiumum.
+  \item 15 minutes maxium.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{To avoid technical debt, what should the team write down in their definition of done? (Choose seven)}
+\begin{enumerate}[A)]
+  \item Nothing. It is not helpful to write down important agreements.
+  \item All previous regression tests pass.
+  \item Checkout and build are fully reproducible, typically with one ot two commands.
+  \item Duplicate code has been removed through refactoring.
+  \item Code has been written by pairs, or at least reviewed by other team members.
+  \item Manual, exploratiy testing has been conducted.
+  \item Regression tests for new functionality run automatically with every build.
+  \item Messy and poorly designed code has been cleaned up through refactoring.
+\end{enumerate}
+
+
+\textbf{Solution}: B, C, D, E, F, G, H:
+
+
+\subsection{Do you agree the PBI will need some testing tasks?}
+\begin{enumerate}[A)]
+  \item Yes, if the team learns to use TDD, some of this will be handled implicitly and repeatably. Manual exploratory testing is also important.
+  \item No. Testing should be done at the of the project. There's always enough time at the end of the project.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Who is responsible for committing to work in the Sprint Planning Meeting?}
+\begin{enumerate}[A)]
+  \item The Project Manager
+  \item The ScrumMaster
+  \item The Team
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Which is a better measure of progress?}
+\begin{enumerate}[A)]
+  \item How much work has been started.
+  \item How much work has been finished.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{How many Sprints are planned during a Sprint Planning Meeting?}
+\begin{enumerate}[A)]
+  \item All the Sprints left in the project. We know more on the first day of a project than we will know in the future.
+  \item One sprint only. Once the Team has established a consistent velocity, the Product Owner can use this velocity to make longer range forecasts and release plans.
+  \item Four Sprints.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Who must attend the Sprint Planning Meeting? (Choose three)}
+
+
+\begin{enumerate}[A)]
+  \item Outside stakeholders.
+  \item The Scrum Development Team.
+  \item The ScrumMaster.
+  \item The Product Owner.
+  \item The manager of the team members.
+\end{enumerate}
+
+
+\textbf{Solution}: B, C, D
+
+
+\subsection{What does a Scrum Team attempt to do during its very first Sprint?}
+\begin{enumerate}[A)]
+  \item Analyze, design, build, integrate, and test a potentially shippable product increment, even if its features are initially simple and small.
+  \item Analyze requirements only.
+  \item Analyze requirements, and put together infrastructure only.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Which of the following are true regarding Product Backlog Items (PBIs) and tasks? (Choose four)}
+\begin{enumerate}[A)]
+  \item A PBI is more about the what than the how. A task is more about the how.
+  \item A well-formed PBI represents distinct business value, ideally from the customer's perspective. A task is just a step by team to create that value.
+  \item A task should be no bigger than one day of work.
+  \item Some Scrum Teams who have learned how to define small enough PBIs no longer find tasks necessary.
+  \item The Product Backlog should contain tasks.
+\end{enumerate}
+
+
+\textbf{Solution}: A, B, C, D
+
+
+\subsection{Which of the following are explicitly defined questions in the Daily Scrum Meeting?(Choose three)}
+\begin{enumerate}[A)]
+  \item What will I do today (or before the next Scrum meeting)?
+  \item What time is the next Daily Scrum Meeting?
+  \item What impeded me (blocks my progress, reduces my effectiveness, etc.)?
+  \item What I do yesterday (or since the last Scrum meeting)?
+  \item What are my actuals compared to my estimates (in hours or days)?
+\end{enumerate}
+
+
+\textbf{Solution}: A, C, D
+
+
+\subsection{Is TDD part of Scrum?}
+\begin{enumerate}[A)]
+  \item Yes. Scrum is a complete methodology containing everything you need to succeed.
+  \item No. Scrum is only a feedback framework. It does not specify particular technical practices.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{The Daily Scrum is one technique to encourage team collaboration. Which physical arrangement encourage collaboration the most?}
+\begin{enumerate}[A)]
+  \item In a typical classroom set up, with all chairs facing the front of the room.
+  \item Standing in an unobstructed circle, without laptops or phones.
+  \item In a typical conference room, with large comfortable chairs encouraging people to stay longer.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is a good size for a Sprint task?}
+\begin{enumerate}[A)]
+  \item 2-3 people 2-3 days, so that every Product Backlog Item equals one Sprint Task.
+  \item One person-day or less, so other team members can easily detect when a task is stuck.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{During the Sprint Execution, a Scrum Team uses \enquote{information radiators} such as the taskboard or sometimes a Sprint Burndown Chart. Who are these for?}
+\begin{enumerate}[A)]
+  \item Outside managers, so they can intervene as soon as they don't like how a Sprint is going.
+  \item The Team, so they can take responsibility for their own work habits.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{In an organisation that embraces Agile values, who would be responsible for tool selection and configuration?}
+
+
+\begin{enumerate}[A)]
+  \item The Teams, who would have to coordinate with each other.
+  \item The ScrumMasters, who would have to coordinate with each other.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{When is Sprint execution completed?}
+\begin{enumerate}[A)]
+  \item When all tasks are complete.
+  \item It depends.
+  \item When call committed Product Backlog Items meet their definition of \enquote{done}.
+  \item When the timebox expires.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What's the first thing we should see at the Sprint Review Meeting?}
+\begin{enumerate}[A)]
+  \item A live demonstration of potentially shippable (properly tested) product increment.
+  \item PowerPoint slides describing project status.
+  \item Design artifacts such as UML diagrams and architectural drawings of things that haven't
+    build and tested yet.
+  \item A report about what happened during the Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{When were the PBIs committed to the Sprint?}
+\begin{enumerate}[A)]
+  \item During the Backlog Refinement Meeting.
+  \item During the Sprint Planning Meeting.
+  \item During the Release Planning Meeting.
+  \item During the Daily Scrum Meeting.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{To whom should the stakeholder direct his complaint about priorities?}
+\begin{enumerate}[A)]
+  \item Any developer on the team.
+  \item The Product Owner.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Does Scrum have a concept of a \enquote{partially done} PBI?}
+\begin{enumerate}[A)]
+  \item Yes, it's important to quantify everything.
+  \item No, it's important to avoid self deception.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{When should a PBI be considered done?}
+\begin{enumerate}[A)]
+  \item When the Product Owner declares it meets the definition of done and any acceptance criteria negotiated with the team.
+  \item When all its tasks have been completed.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{What should a PO usually do with a partially complete PBI?}
+\begin{enumerate}[A)]
+  \item Return the entire PBI wherever he wants within the Product Backlog.
+  \item Try to count the part that's done and put the rest back into the Product Backlog.
+  \item Call it done but log a defect against it in a seperate tracking system.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{What's a good use for velocity?}
+\begin{enumerate}[A)]
+  \item To help the Product Owner make forecasts about what might be done by a given release date.
+  \item To specify exactly how much work the Team should commit into the next Sprint.
+  \item To guide a conditional reward system for employees.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Henry Ford discovered the more adapted you become to an unchanging situation,
+  the less adaptable you are. In an unvertain world, which is a wiser area for a ScrumMaster to
+  focus on?}
+
+
+\begin{enumerate}[A)]
+  \item An efficient team. More! Better! Faster!
+  \item A learning team. A learning team can become more efficient when necessay.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Is restrospective safety enhanced by inviting outside spectators who weren't working on the team?}
+\begin{enumerate}[A)]
+  \item Yes. Its just like watching a hockey game.
+  \item No. If the team needs to discuss issues with outsiders it's usually better to do
+    this after the retrospective.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Is a safety check by itself a complete Sprint Retrospective?}
+\begin{enumerate}[A)]
+  \item Yes.
+  \item No.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{In Scrum, how often is the Sprint Retrospective Meeting conducted?}
+\begin{enumerate}[A)]
+  \item Every day.
+  \item Every Sprint.
+  \item Every project.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Groups often fool themselves with \enquote{pseudo-solutions} that don't really change
+  anything. Which of the following are more effective? (Choose three)}
+\begin{enumerate}[A)]
+  \item Make an agreement that will be vetoed by someone who is not present.
+  \item Agree to \enquote{try harder} from now on.
+  \item A volunteer agress to a specific action by a specific date.
+  \item Team writes concrete adjustments to its working agreements.
+  \item Team agrees to try a different approach as an experiment for one Sprint.
+  \item Delegate a job to someone who won't have time to do it.
+\end{enumerate}
+
+
+\textbf{Solution}: C, D, E
+
+
+\subsection{Which of the following best describes the approach for determining the iteration (timebox) length?}
+\begin{enumerate}[A)]
+  \item Iterations (timeboxes) should always be 30 days
+  \item The team determines iteration (timebox) length by dividing the total number of story points by the average velocity of the team
+  \item Iterations (timeboxes) should always be two weeks
+  \item The team should agree on the length of the iteration (timebox), taking the size and complexity of the project into consideration
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Who is responsible for prioritizing the product backlog?}
+\begin{enumerate}[A)]
+  \item PO
+  \item Project Manager
+  \item Lead Developer
+  \item Business Analyst
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{What are the advantages of maintaining consistent iteration (timebox) length throughout the project?}
+\begin{enumerate}[A)]
+  \item It helps to establish a consistent pattern of delivery
+  \item It helps the team to objectively measure progress
+  \item It provides a consistent means of measuring team velocity
+  \item All of the above
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Why is it important to trust the team?}
+\begin{enumerate}[A)]
+  \item High trust teams do not have to be accountable to each other
+  \item High trust teams do not require a user representative
+  \item The Project Manager does not then have to keep a project schedule
+  \item The presence of trust is positively correlated with the team performance
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{An effective workshop facilitator will always ...}
+\begin{enumerate}[A)]
+  \item Involve the whole project team in all project workshops
+  \item Agree the process and participants of the workshop with the workshop owner before the workshop
+  \item Involve only those team members who will commit to doing further work after the workshop
+  \item Act as a proxy for any invited participant who is unable to attend the workshop on the day
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{If a timebox (iteration) plan needs to be reprioritised in a hurry, who should re-prioritise?}
+\begin{enumerate}[A)]
+  \item The developers alone (they know what the customer wants).
+  \item The Product Owner (the developers would only choose the easy things as top priority).
+  \item The Project Leader (they can give an independent, pragmatic view).
+  \item The whole team including Product Owner and developers (together they can consider both business value and practicality).
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{What is the effect of having a large visible project plan on a wall?}
+\begin{enumerate}[A)]
+  \item It removes the need to create any other reports for management.
+  \item It continuously communicates progress within the team and to other stakeholders.
+  \item It allows the Project Manager to allocate tasks to specific team members.
+  \item It is restrictive, as it does not allow the team to innovate and change.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{How should work be allocated to the team in an Agile project?}
+\begin{enumerate}[A)]
+  \item The Team Leader (Scrum Master) should allocate specific tasks to individuals
+  \item Tasks should be randomly allocated to team members, using Planning Poker
+  \item Team members should self-select tasks appropriate to their skills
+  \item The most complex tasks should be allocated by the Team Leader (Scrum Master)
+\end{enumerate}
+
+\textbf{Solution}: C
+
+
+\subsection{What should the developers do if the customer representative is repeatedly too busy to be available?}
+\begin{enumerate}[A)]
+  \item Continue the work, record the assumptions and ask the customer later for input.
+  \item Send the customer a written warning that the end product will be completed on time, but may not meet their needs
+  \item Allow the Business Analyst to take on the role of Proxy Customer Representative
+  \item Draw the problem to the attention of the Scrum Master (Team Leader)
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{Which one of the following is an important feature of the daily stand-up / wash up / Scrum meeting?}
+\begin{enumerate}[A)]
+  \item Everyone is expected to stand for the whole time, to keep the meeting short
+  \item The meeting must be kept short and well structured
+  \item The meeting should ensure that it is clear to all which team members are not performing
+  \item No-one is allowed to leave the stand-up meeting until all problems raised have been solved
+\end{enumerate}
+
+\textbf{Solution}: B
+
+
+\subsection{Who should attend the stand-up meetings?}
+\begin{enumerate}[A)]
+  \item Sponsor and Executive Management only
+  \item Project Manager and Technical Leads only
+  \item Project Leader and Customer Representatives only
+  \item The entire team
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{One of the development stages you would expect to see a team go through is:}
+\begin{enumerate}[A)]
+  \item Storming
+  \item Warming
+  \item Cloning
+  \item Yawning
+\end{enumerate}
+
+\textbf{Solution}: A
+
+
+\subsection{When estimating is done for a project, the developers should:}
+\begin{enumerate}[A)]
+  \item Be fully involved in the estimating process
+  \item Be in total control of the estimating process
+  \item Be consulted after the Team Leader (Scrum Master) has made the estimates for the team’s work
+  \item Not make estimates unless velocity is already known
+\end{enumerate}
+
+\textbf{Solution}: A
+
+
+\subsection{During an iteration (sprint) (timebox) the developers should be:}
+\begin{enumerate}[A)]
+  \item Able to contact the customer to clarify aspects of the work
+  \item Completely uninterrupted by the customer
+  \item In twice-daily contact with the customer
+  \item Able to work without needing to disturb the customer
+\end{enumerate}
+
+\textbf{Solution}: A
+
+
+\subsection{The Agile Manifesto states the following values:}
+\begin{enumerate}[A)]
+  \item People are more important than contracts.
+  \item Working software should have priority over comprehensive documentation.
+  \item Plans should have priority over ability to respond.
+  \item Contracts should be negotiated which allow control over the people.
+\end{enumerate}
+
+\textbf{Solution}: B
+
+
+\subsection{A sustainable pace means ...}
+\begin{enumerate}[A)]
+  \item If the team members work long hours regularly they will get used to it, and be able to sustain it
+  \item A 40 hour week is only for the weaker members of the team. Others can do more.
+  \item The team should establish a velocity which can be sustained within normal working hours
+  \item Working long hours is the only way to deliver on time
+\end{enumerate}
+
+\textbf{Solution}: C
+
+
+\subsection{A burn-down chart shows ...}
+\begin{enumerate}[A)]
+  \item The energy level and velocity of the team
+  \item The remaining work (effort, points) to complete before the iteration (timebox) end
+  \item The number of hours worked by each team member during the iteration (timebox)
+  \item The rate of spending of the budget for a project
+\end{enumerate}
+
+\textbf{Solution}: B
+
+
+\subsection{The reason for holding regular Retrospectives is:}
+\begin{enumerate}[A)]
+  \item It allows the team to take a necessary break from work
+  \item It gives management information to use in team members’ performance reviews
+  \item It allows learning which can be used to improve team performance during the project
+  \item It prevents deviation from the process which the team has been following
+\end{enumerate}
+
+\textbf{Solution}: C
+
+
+\subsection{How could maintainability of the developing product be improved in a development team?}
+\begin{enumerate}[A)]
+  \item Apply standard design patterns
+  \item All of these
+  \item Make refactoring a common practice
+  \item Ensure unit testing is included in the \enquote{done} criteria
+\end{enumerate}
+
+\textbf{Solution}: B
+
+
+\subsection{Agile methods are described as \enquote{adaptive} because...}
+\begin{enumerate}[A)]
+  \item Agile teams have the empowerment to frequently respond to change and to learn on a project by changing the plan
+  \item The rate of development progress on an Agile project is constantly tracked to allow adaptation
+  \item Project Managers are not needed in Agile methods because teams are self-organising
+  \item Workshops held at the beginning and the end of every iteration (timebox) allow the team to adapt the product specification
+\end{enumerate}
+
+\textbf{Solution}: A
+
+
+\subsection{What is one difference in responsibility between a Project Manager and a Scrum Master (Team Leader) in an Agile project?}
+\begin{enumerate}[A)]
+  \item None. It's basically the same. Scrum Master (or Team Leader) is just a better term than Project Manager in an Agile project
+  \item The Project Manager creates the detailed delivery plans while the Team Leader monitors execution within the team
+  \item Project Manager communicates with project governance authorities when necessary
+  \item The Project Manager monitors the realisation of benefits in the business case.
+\end{enumerate}
+
+\textbf{Solution}: C
+
+
+\subsection{The responsibilities of a Product Owner will include ...}
+
+
+\begin{enumerate}[A)]
+  \item Business processes diagramming
+  \item Prioritizing requirements
+  \item Managing the project budget
+  \item All of these
+\end{enumerate}
+
+\textbf{Solution}: B
+
+
+\subsection{What is the goal of a Sprint Retrospective? Please select the option(s) that NOT adhere to the purpose of this important Scrum meeting:}
+\begin{enumerate}[A)]
+  \item Discuss the impediments raised by the Development Team during the last sprint, and make a plan for implementing improvements.
+  \item Refinement of epics nominated by the Product Owner for the next couple of sprints, in order to promote reliable release planning.
+  \item Verification of how well the product increment satisfies the applicable user stories in the Product Backlog.
+  \item Discuss the interaction within the Scrum Team, and agree upon measures to improve the collaboration.
+\end{enumerate}
+
+\textbf{Solution}: B, C
+
+
+\subsection{The Product Owner role and Scrum Master role are never included in the Development Team size count.}
+\begin{enumerate}[A)]
+  \item True
+  \item False
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Scrum allows for re-estimating tasks based on growing insight. Which Scrum team member is responsible for updating the estimates of the work during a Sprint?}
+\begin{enumerate}[A)]
+  \item Development Team
+  \item SM
+  \item most senior member of the Team.
+  \item PO
+\end{enumerate}
+
+\textbf{Solution}: A
+
+
+\subsection{Timeboxing is an important principle of Scrum. What is the exact meaning of a meeting having a time-box?}
+\begin{enumerate}[A)]
+  \item must happen by a given time.
+  \item must happen at the same time every day.
+  \item must take at least a minimum amount of time.
+  \item can take no more than a maximum amount of time.
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{Resolving internal conflicts is NOT the responsibility of the Development Team.}
+\begin{enumerate}[A)]
+  \item True
+  \item False
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is NOT an attribute of the Development Team?}
+\begin{enumerate}[A)]
+  \item Members of Development Teams are exchanged frequently to promote continuous learning and cross-functionality.
+  \item The Development Team provides input for the Sprint Planning Meeting with respect to the projected capacity during the upcoming Sprint.
+  \item The Development Team may re-negiotiate with the Product Owner the work needed to deliver the agreed upon sprint goal during the running sprint, when more is learned.
+  \item The Development Team update their estimate of the total amount of remaining work for completion of the running sprint, so that it can be plotted on the Sprint Burndown Chart.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{One of the benefits from Scrum is that the Development Team doesn't have to write detailed specifications anymore.}
+\begin{enumerate}[A)]
+  \item True
+  \item False
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What are the major properties of a cross-functional Development Team?:}
+\begin{enumerate}[A)]
+  \item The team is able to complete the project according to the planning,
+    after the date and cost are committed to the Product Owner.
+  \item The team has all the skills on board, needed to accept collective
+    ownership for the next product increment.
+  \item All team members have a the knowledge and experience needed
+    to deliver the correct product increment.
+  \item The team comprises competence teams dedicated to particular
+    domains like specialized testing or business analysis, to facilitate
+    deliverance of the highest business value.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{A Scrum team thought it a good practice to clearly define a checklist of items that must be completed before calling a story \enquote{completed}.  What artifact are they likely to be using for this?}
+\begin{enumerate}[A)]
+  \item Burndown chart
+  \item Definition of done
+  \item Product backlog
+  \item Sprint backlog
+\end{enumerate}
+
+\textbf{Solution}: B
+
+
+\subsection{A Sprint just concluded and it was a disaster. None of the planned stories completed and the review had to be cancelled. Senior management wants to establish accountability for this.  Who is ultimately accountable for the success or failure of a Scrum team?}
+\begin{enumerate}[A)]
+  \item Product Owner
+  \item Scrum Master
+  \item Senior Management
+  \item Team
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{A team member from a Scrum team feels that a senior technical architect from another team may have some valuable insights and feedback about the product. Which is the best forum to solicit such feedback?}
+\begin{enumerate}[A)]
+  \item Daily Scrum
+  \item Sprint Planning
+  \item Sprint Retrospective
+  \item Sprint Review
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{At the end of each working day, the team members update the number of hours remaining on the tasks on a white board. The Scrum Master then sums up the hours and plots them on a chart.  What is the name of this chart?}
+\begin{enumerate}[A)]
+  \item Burndown chart
+  \item Burnup chart
+  \item Niko-Niko chart
+  \item Parking lot diagram
+\end{enumerate}
+
+\textbf{Solution}: A
+
+
+\subsection{How long should it take a five member Scrum team to finalize the Sprint plan for a three week Sprint?}
+\begin{enumerate}[A)]
+  \item One to three hours
+  \item Three to six hours
+  \item Six to twelve hours
+  \item Fifteen hours
+\end{enumerate}
+
+
+\textbf{Solution}: B (Sprint planning should ideally take one to two hours per week of Sprint duration)
+
+
+\subsection{A Scrum team realizes that it may be late in delivering a component that another Scrum team is waiting for.  What is the best forum to discuss this issue and find a resolution?}
+\begin{enumerate}[A)]
+  \item Daily scrum of either team
+  \item Scrum-of-Scrum
+  \item Sprint review
+  \item Sprint retrospective
+\end{enumerate}
+
+\textbf{Solution}: B
+
+
+\subsection{What is an assertion of the Agile manifesto?}
+\begin{enumerate}[A)]
+  \item We value contract negotiation over customer collaboration.
+  \item We value following a plan over responding to change.
+  \item We value processes and tools over customer individuals and interaction.
+  \item We value working software over comprehensive documentation.
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{What is the best way to improve communications in a distributed Scrum team?}
+\begin{enumerate}[A)]
+  \item Appointing a single point of contact for communication across locations
+  \item Co-locating the entire team for a release planning session
+  \item Establish a clear audit trail for all communication on the project
+  \item Introduce additional sign-offs on the project to ensure oversight
+\end{enumerate}
+
+\textbf{Solution}: B
+
+
+\subsection{What is the best time to refactor code on a project?}
+\begin{enumerate}[A)]
+  \item Continuously and at the earliest possible opportunity
+  \item During hardening iterations
+  \item During the last iteration
+  \item When the Product Owner decides to schedule it
+\end{enumerate}
+
+\textbf{Solution}: A
+
+
+\subsection{In the past eight Sprints, the team has completed 85 story points worth of work altogether. The team has been asked to start working on a new project which is estimated at 64 story points.  How many Sprints would be needed to complete this project?}
+\begin{enumerate}[A)]
+  \item Five
+  \item Seven
+  \item Eight
+  \item Ten
+\end{enumerate}
+
+
+\textbf{Solution}: B,The velocity of the team is 85/8. The number of Sprints required to
+complete the project is 64/velocity, which works out to be slightly above six. Hence
+seven is the most reasonable answer.
+
+
+\subsection{What's the primary goal of Agile development?}
+\begin{enumerate}[A)]
+  \item Added value of working software.
+  \item Delivering software every Quarter.
+  \item Collocation of the team.
+  \item Processes, Documentation, Contracts, and limited change.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{The correct sequence of events in using Scrum framework is as follows:}
+\begin{enumerate}[A)]
+  \item Release Planning, Sprint Planning, Sprint, Sprint Retrospective, Daily Scrum, and Sprint Review.
+  \item Release Planning, Sprint Planning, Sprint, Daily Scrum, Sprint Review, and Sprint Retrospective.
+  \item Sprint Planning, Release Planning, Sprint, Sprint Retrospective, Daily Scrum, and Sprint Review.
+  \item Release Planning, Sprint Planning, Daily Scrum, Sprint, Sprint Review, and Sprint Retrospective.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Who is the most important member of the Scrum Team? }
+\begin{enumerate}[A)]
+  \item The ScrumMaster.
+  \item The Team.
+  \item The Stakeholder.
+  \item The Product Owner.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Who has the authority to change or cancel a Sprint? }
+\begin{enumerate}[A)]
+  \item The team members.
+  \item The Scrum Master.
+  \item The Product Owner.
+  \item The Project Manager.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{If the Team determines that it has overcommitted itself for a Sprint, who should be present when reviewing and adjusting the Sprint goal and work?}
+\begin{enumerate}[A)]
+  \item The ScrumMaster, Project Manager, and Team.
+  \item The Team.
+  \item The Product Owner and Team.
+  \item The Product Owner and all stakeholders.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Which of the following processes reflects Agile Development?}
+\begin{enumerate}[A)]
+  \item Analysis, Design, Development, Testing, Documentation, Training, Implementation and Maintenance.
+  \item Vision, Release Planning, Product Backlog, Sprint Planning, Sprint Backlog, Daily Scrum Meeting, Sprint Review, Sprint Retrospective.
+  \item Analysis, Design, Code, and Test.
+  \item Release Planning, Sprint Planning, Daily Scrum, Sprint, Sprint Review, and Sprint Retrospective.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What does the Sprint Backlog consist of?}
+\begin{enumerate}[A)]
+  \item User Stories.
+  \item Use Cases.
+  \item Tasks.
+  \item Test cases.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{What happens when the Sprint is cancelled?}
+\begin{enumerate}[A)]
+  \item The Scrum Team disbands immediately.
+  \item The complete Sprint Backlog is put back to the Product Backlog.
+  \item The completed Sprint Backlog items are evaluated for a release and incomplete items are discarded.
+  \item The completed Sprint Backlog items are evaluated for a release and incomplete items are put back to the Product Backlog.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What does the BurnDown Chart represent?}
+\begin{enumerate}[A)]
+  \item Work completed by the Scrum Team.
+  \item Work remaining to be completed in the Sprint Backlog.
+  \item Work remaining to be completed in the Product Backlog.
+  \item Work completed in the Sprints completed to date.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is the Time-box for the Sprint Retrospective?}
+\begin{enumerate}[A)]
+  \item As long as required.
+  \item 1 hour.
+  \item 2 hours.
+  \item 3 hours.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Which statement is an incorrect assessment of the Product Owner?}
+\begin{enumerate}[A)]
+  \item The Product Owner plays a dual role, Product Owner and Scrum Master.
+  \item The Product Owner is the only person responsible for the Product Backlog.
+  \item The Product Owner prioritizes the Product Backlog
+  \item The Product Owner is one person not a committee.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{When should the Product Owner ship or implement a Sprint increment?}
+\begin{enumerate}[A)]
+  \item At the end of every Sprint.
+  \item When the Team feels is done with every Sprint.
+  \item Whenever the increment is free of defects.
+  \item When it makes sense.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{How much work must a Scrum Team do to a Product Backlog it selects for a Sprint?}
+\begin{enumerate}[A)]
+  \item As much work as the Team can fit into a Sprint.
+  \item All of the analysis, design, development, testing and documentation work.
+  \item The best amount of work the Team can do given that is usually impossible for QA to finish all of the testing that is needed to prove it can be shipped.
+  \item As much work as it has told the Product Owner will be done for every Product Backlog item it selects.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{The Scrum Team is most productive if it is not interrupted during a Sprint. As a result of...}
+\begin{enumerate}[A)]
+  \item The Spring Backlog emerges to reflect the work to develop the committed Product Backlog items.
+  \item The Spring Backlog can only change with approval from the product owner.
+  \item The Sprint Backlog is devised during the Sprint Planning and should not need changing thereafter.
+  \item The Sprint Backlog is never changed.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is the best term to define the function of the ScrumMaster?}
+\begin{enumerate}[A)]
+  \item Customer.
+  \item Developer.
+  \item Servant Leader.
+  \item Stakeholder.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{When is a Sprint over?}
+\begin{enumerate}[A)]
+  \item When all Sprint Backlog items meet their definition of \enquote{done}.
+  \item When all the tasks are completed.
+  \item When the Product Owner says it is done.
+  \item When the time-box expires.
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{What part of the Sprint Backlog is used for the Sprint burndown chart?}
+\begin{enumerate}[A)]
+  \item The percentage of work completed by each Team member.
+  \item The number of Product Backlog items completed by all the Team members.
+  \item The actual time spent on each task by each team member.
+  \item The remaining time required to complete each task by each team member.
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{Which objectives are covered as part of Sprint Planning?}
+\begin{enumerate}[A)]
+  \item Updating the scope of the release with all Sprints, end dates, and costs.
+  \item Recalculating empirical velocity, adjusting team capacity accordingly, and projecting end dates.
+  \item Reviewing current functionality that binds the software solution.
+  \item Understanding what functionality the Product Owner desires within the next Sprint and figuring out how to do it.
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{If the product effort is estimated to be 1000 hours, what is the time that is recommended for release planning.}
+\begin{enumerate}[A)]
+  \item 100 hours.
+  \item 50$\%$ of the effort.
+  \item 1000 hours.
+  \item 15-20$\%$ of the effort.
+\end{enumerate}
+
+\textbf{Solution}: D
+
+
+\subsection{Assuming a 2-week Sprint, What is the Time-box for the Sprint Review?}
+\begin{enumerate}[A)]
+  \item 2 hours at the end of every sprint.
+  \item 15 minutes.
+  \item However long is needed.
+  \item 4 hours.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Drawing a trend line from previous completed work on a release burndown chart indicates. }
+\begin{enumerate}[A)]
+  \item When the project will be over if the Product Owner removes work that is equal in effort to any new work that is added.
+  \item Cost of the project.
+  \item When all Sprint Backlog tasks will be completed and the Scrum Team will be released for other work.
+  \item When the work remaining will be completed if nothing changes.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What is the Release Burndown?}
+\begin{enumerate}[A)]
+  \item A graph indicating what has been completed by the Scrum Team.
+  \item What has been completed by the Scrum Team to date.
+  \item The work remaining to be completed by the Product Owner.
+  \item A measure of the remaining Product Backlog across the time of a release plan.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Who determines when it is appropriate to update the Sprint Backlog during the Sprint?}
+\begin{enumerate}[A)]
+  \item The Team.
+  \item The Scrum Master.
+  \item The Product Owner.
+  \item The Scrum Team.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{The following artifacts are critical to the success of Agile Development:}
+\begin{enumerate}[A)]
+  \item Status Report, Design Document, and Test Results.
+  \item Scrum Master, Product Owner, and Delivery Team.
+  \item Product Backlog, Sprint Backlog, and BurnDown Chart.
+  \item Vision, Release Planning, Product Backlog, Sprint Planning, Sprint Backlog, Daily Scrum Meeting, Sprint Review, Sprint Retrospective.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{What happens when the Sprint is cancelled?}
+\begin{enumerate}[A)]
+  \item The Scrum Team disbands immediately.
+  \item The complete Sprint Backlog is put back to the Product Backlog.
+  \item The completed Sprint Backlog items are evaluated for a release and incomplete items are discarded.
+  \item The completed Sprint Backlog items are evaluated for a release and incomplete items are put back to the Product Backlog.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{More than one Scrum Team is working on a single project or release. How should the Product Backlog be arranged? }
+\begin{enumerate}[A)]
+  \item A separate Product Backlog is constructed for each Scrum Team. All of the increments are integrated at the end in an integration Sprint
+  \item All Scrum Teams work from a common Product Backlog and integrate their work every sprint
+  \item Only one Scrum Team should work on Scrum project
+  \item Scrum Teams should have their separate Product Backlogs.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is the primary responsibility of the ScrumMaster?}
+\begin{enumerate}[A)]
+  \item To Prioritize the Product Backlog.
+  \item To manage the Scrum Team.
+  \item To work with the Product Owner to develop the Product Backlog.
+  \item To remove any impediments the Scrum Team encounters during their work.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What are the two primary ways a Scrum Master keeps a Development Team working at its highest level of productivity?}
+\begin{enumerate}[A)]
+  \item By facilitating Development Team decisions
+  \item By removing impediments that hinder the Development Team
+  \item By ensuring the meetings start and end at the proper time
+  \item By keeping high value features high in the Product Backlog
+\end{enumerate}
+
+
+\textbf{Solution}: A, B
+
+
+\subsection{The Product Backlog is ordered by:}
+\begin{enumerate}[A)]
+  \item Size, where small items are at the top and large items are at the bottom.
+  \item Risk, where safer items are at the top, and riskier items are at the bottom
+  \item Least valuable items at the top to most valuable at the bottom.
+  \item Items are randomly arranged.
+  \item Whatever is deemed most appropriate by the Product Owner.
+\end{enumerate}
+
+
+\textbf{Solution}: E
+
+
+\subsection{The length of a Sprint should be:}
+\begin{enumerate}[A)]
+  \item Short enough to keep the business risk acceptable to the Product Owner.
+  \item Short enough to be able to synchronize the development work with other business events.
+  \item No more than one calendar month.
+  \item All of these answers are correct.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Who is responsible for managing the progress of work during a Sprint?}
+\begin{enumerate}[A)]
+  \item The Development Team
+  \item The Scrum Master
+  \item The Product Owner
+  \item The most junior member of the Team
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{The Development Team should not be interrupted during the Sprint. The Sprint Goal should remain intact. These are conditions that foster creativity, quality and productivity. Based on this, which of the following is FALSE?}
+\begin{enumerate}[A)]
+  \item The Product Owner can help clarify or optimize the Sprint when asked by the Development Team.
+  \item The Sprint Backlog is fully formulated in the Sprint Planning meeting and does not change during the Sprint.
+  \item As a decomposition of the selected Product Backlog Items, the Sprint Backlog changes and may grow as the work emerges.
+  \item The Development Team may work with the Product Owner to remove or add work if it finds it has more or less capacity than it expected.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+
+\subsection{When many Development Teams are working on a single product, what best describes the definition of \enquote{done}?}
+\begin{enumerate}[A)]
+  \item Each Development Team defines and uses its own. The differences are discussed and reconciled during a hardening Sprint.
+  \item Each Development Team uses its own but must make their definition clear to all other Teams so the differences are known.
+  \item All Development Teams must have a definition of \enquote{done} that makes their combined work potentially releasable.
+  \item It depends.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Who should know the most about the progress toward a business objective or a release, and be able to explain the alternatives most clearly?}
+\begin{enumerate}[A)]
+  \item The Product Owner
+  \item The Development Team
+  \item The Scrum Master
+  \item The Project Manager
+\end{enumerate}
+
+\textbf{Solution}: A
+
+
+\subsection{What is the role of Management in Scrum?}
+\begin{enumerate}[A)]
+  \item Continually monitor staffing levels of the Development Team.
+  \item Monitor the Development Team's productivity.
+  \item Support the Product Owner with insights and information into high value product and system capabilities. Support the Scrum Master to cause organizational change that fosters empiricism, self-organization, bottom-up intelligence, and intelligent release of software.
+  \item Identify and remove people that aren't working hard enough.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Which two (2) things does the Development Team do during the first Sprint?}
+\begin{enumerate}[A)]
+  \item Deliver an increment of releasable software.
+  \item Determine the complete architecture and infrastructure for the product.
+  \item Develop and deliver at least one piece of functionality.
+  \item Develop a plan for the rest of the release.
+  \item Create the complete Product Backlog to be developed in subsequent Sprints.
+\end{enumerate}
+
+
+\textbf{Solution}: A, C
+
+
+\subsection{When might a Sprint be abnormally terminated?}
+\begin{enumerate}[A)]
+  \item When it becomes clear that not everything will be finished by the end of the Sprint.
+  \item When the Development Team feels that the work is too hard.
+  \item When the sales department has an important new opportunity.
+  \item When the Sprint Goal becomes obsolete.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{The CEO asks the Development Team to add a \enquote{very important} item to a Sprint that is in progress. What should the Development Team do?}
+\begin{enumerate}[A)]
+  \item Add the item to the current Sprint without any adjustments.
+  \item Add the item to the current Sprint and drop an item of equal size.
+  \item Add the item to the next Sprint.
+  \item Inform the Product Owner so he/she can work with the CEO.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Sprint Backlog is ultimately owned by}
+\begin{enumerate}[A)]
+  \item The product owner
+  \item The scrum master
+  \item The stakeholders
+  \item The scrum team
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{During a Scrum of Scrums approach for a project, what best defines the definition of \enquote{done}?}
+\begin{enumerate}[A)]
+  \item Each Team define and uses its own.
+  \item Each Team users its own but must make it clear to all other Teams.
+  \item All teams must use the same definition.
+  \item It depends.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{The used metric to estimate with Planning Poker is}
+\begin{enumerate}[A)]
+  \item Numeric sizing (1..10)
+  \item T-short sizes (XS, S, M, ...)
+  \item The Fibonacc sequence
+  \item Person hours
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{What are the most critical items to start a Scrum Project?}
+\begin{enumerate}[A)]
+  \item Scrum Team and Stakeholders
+  \item Scrum Team, Product Backlog, Scrum Master
+  \item Product Backlog, Scrum Team, Scrum Master, and Product Owner
+  \item Time, Scope, Budget, and Quality
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{During a Sprint, when is a new work or further decomposition of work to be added to the Sprint Backlog?}
+\begin{enumerate}[A)]
+  \item During the Daily Scrum after the Development Team approves them
+  \item When the Scrum Master has time to enter them
+  \item Whent the Product Owner identifies a new work
+  \item As soon as possible after they are identified
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What is the BEST length of an iteration in Scrum?}
+\begin{enumerate}[A)]
+  \item 1 week
+  \item There is no ideal iteration length. It depends on the project and can vary.
+  \item 2 weeks
+  \item 1 month
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Items in the Product Backlog tend to be:}
+\begin{enumerate}[A)]
+  \item Smaller than the items in the Sprint Backlog
+  \item Larger than the items in the Sprint Backlog
+  \item Usually much smaller than related Sprint Backlog Items, but it depends
+  \item The same size as the items in the Sprint Backlog
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What are the critical items to start a Scrum Project?}
+A. Scrum Team and Stakeholders
+B. Scrum Team, Product Backlog, Scrum Master
+C. Product Backlog, Scrum Team, Scrum Master, and Product Owner
+D. Time, Scope, Budget, and Quality
+
+\begin{enumerate}[A)]
+  \item A and D.
+  \item C.
+  \item A, B, and C.
+  \item A and B.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is the ultimate goal of the Scrum Team? }
+\begin{enumerate}[A)]
+  \item To prioritize the Sprint Backlog.
+  \item To complete the Product Backlog.
+  \item To prioritize the Product Backlog.
+  \item To complete the Sprint Backlog into a releasable piece of the product.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+
+\subsection{Who defines the Sprint Backlog scope?}
+\begin{enumerate}[A)]
+  \item Product Owner.
+  \item Scrum Team.
+  \item Scrum Master.
+  \item Stakeholders.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is the major difference between Product Backlog and Sprint Backlog?}
+\begin{enumerate}[A)]
+  \item The Product Backlog is equal to the Sprint Backlog.
+  \item The Product Backlog is a subset of the Sprint Backlog.
+  \item The Sprint Backlog is a subset of the Product Backlog.
+  \item The Sprint Backlog is owned by the Product Owner.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{The maximum duration of the Sprint is highly recommended to be.}
+\begin{enumerate}[A)]
+  \item 5 days.
+  \item 10 days.
+  \item 15 days.
+  \item Less than a month.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{As the Sprint planning progresses, the workload has grown beyond the team's capacity. Which action makes most sense for the Team?}
+\begin{enumerate}[A)]
+  \item Work overtime for the Sprint
+  \item Collaborate with the Product Owner and potentially remove or change items
+  \item Cancel the Sprint
+  \item Star the Sprint and recruit additional team members
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What does it mean to say that an event is timebox?}
+\begin{enumerate}[A)]
+  \item The event must be completed in a certain time.
+  \item The event is \enquote{boxed} to a maximum amount of time that it can take.
+  \item The event has a suggested time to meet every week.
+  \item The event is a box that contains time.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Which of the following statement are true about the Daily Scrum Meeting:}
+\begin{itemize}
+  \item A. This is a daily 15-minutes meeting.
+  \item B. The Product Owner runs the meeting.
+  \item C. The Daily Scrum Meeting takes place at the same time and place.
+  \item D. The Daily Scrum Team Meeting is for each team member to provide things accomplished, thing to do before the next meeting, and identify any obstacles.
+\end{itemize}
+
+
+\begin{enumerate}[A)]
+  \item A and C.
+  \item A and D.
+  \item A, B, and C.
+  \item A, C, and D.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Which of the following statements are true for the Product Backlog.}
+\begin{itemize}
+  \item A. The Product Owner is responsible for the Product Backlog.
+  \item B. The Product Backlog is dynamic.
+  \item C. Priority is driven by risk, value, and necessity.
+  \item D. The Product Backlog is fixed and it cannot changed once it is fully defined.
+\end{itemize}
+
+
+\begin{enumerate}[A)]
+  \item A, B, and C.
+  \item B and C.
+  \item A and B.
+  \item A, B, and D.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{When should the Sprint Retrospective be held?}
+\begin{enumerate}[A)]
+  \item At the end of the last Sprint in a project or release.
+  \item At the beginning of each Sprint.
+  \item Only when the Scrum team determines it needs one.
+  \item At the end of each Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What's the primary goal of Agile development?}
+\begin{enumerate}[A)]
+  \item Added value of working software.
+  \item Delivering software every Quarter.
+  \item Collocation of the team.
+  \item Processes, Documentation, Contracts, and limited change.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{The Sprint Burndown charts are an efficient tracking tool because they show.}
+\begin{enumerate}[A)]
+  \item The estimated work remaining as the Sprint progresses.
+  \item How many Product Backlog items remain.
+  \item How many hours have been worked by each team member.
+  \item How much effort has gone into the Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{When is a Product Backlog item considered complete? }
+\begin{enumerate}[A)]
+  \item When all defined tasks are complete.
+  \item When QA reports that it passes all acceptance criteria.
+  \item When it adheres to the definition of \enquote{done}.
+  \item At the end of the Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{The responsibility to remove impediments that will prevent the team from accomplishing the over all objective of the sprint is?}
+\begin{enumerate}[A)]
+  \item The ScrumMaster.
+  \item The Product Owner.
+  \item The Stakeholders.
+  \item The Developer.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{Which statement is an incorrect assessment of the Scrum Team?}
+\begin{enumerate}[A)]
+  \item The Scrum Team is self-organizing.
+  \item The Scrum Team is responsible for the Sprint Backlog.
+  \item The Scrum Team is cross-functional.
+  \item The Scrum Team is made up of fifteen members of various set of skills.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Which statement is an incorrect assessment of the Scrum Master?}j
+\begin{enumerate}[A)]
+  \item The ScrumMaster is responsible for ensuring the team adheres to Scrum rules.
+  \item The Scrum Master helps the team to be more productive and produce higher quality results that contribute towards the end product.
+  \item The Scrum Master manages the Team.
+  \item The Scrum Master removes impediments that prevents the team from performing effectively and efficiently.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Drawing a trend line from previous completed work on a release burndown chart indicates.}
+\begin{enumerate}[A)]
+  \item When the project will be over if the Product Owner removes work that is equal in effort to any new work that is added.
+  \item Cost of the project.
+  \item When all Sprint Backlog tasks will be completed and the Scrum Team will be released for other work.
+  \item When the work remaining will be completed if nothing changes.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{What is the Release Burndown?}
+
+\begin{enumerate}[A)]
+  \item A graph indicating what has been completed by the Scrum Team.
+  \item What has been completed by the Scrum Team to date.
+  \item The work remaining to be completed by the Product Owner.
+  \item A measure of the remaining Product Backlog across the time of a release plan.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Who is ultimate responsible for the Product Backlog item estimates?}
+
+\begin{enumerate}[A)]
+  \item ScrumMaster.
+  \item Product Owner.
+  \item The Scrum Team.
+  \item Stakeholders.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{When many Scrum Teams are working on a project, what best describes the definition of \enquote{done}?}
+
+\begin{enumerate}[A)]
+  \item Each Team defines and uses its own.
+  \item Each Team uses its own but must make it clear to all other Teams.
+  \item All teams must use the same definition.
+  \item It depends.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{When many Scrum Teams are working on the same product, should all of their increments be integrated every Sprint?}
+
+\begin{enumerate}[A)]
+  \item No, that is far too hard.
+  \item Yes, but only the Scrum's Teams whose work has dependencies.
+  \item No, each Scrum Team stands alone.
+  \item Yes, otherwise Product Owners may not be able to inspect what is done accurately.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{15. What's the Scrum Team definition of \enquote{Done}?}
+
+\begin{enumerate}[A)]
+  \item Whatever the ScrumMaster wants it to be.
+  \item Whatever the Product Owner wants it to be.
+  \item Whatever the Stakeholders want it to be.
+  \item Whatever the Scrum Team defines \enquote{done} to be.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Which of the following statements are true about the Sprint?}
+\begin{itemize}
+  \item Sprints are time-boxed.
+  \item Sprint is an iteration.
+  \item The Product Backlog is a subset of the Sprint Backlog.
+  \item The Scrum Master ensures no changes are made to the Sprint Goal.
+\end{itemize}
+
+\begin{enumerate}[A)]
+  \item A
+  \item B
+  \item A, B, and D
+  \item All of the above.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{What is the Sprint Burndown?}
+\begin{enumerate}[A)]
+  \item The item completed from the Sprint Backlog.
+  \item A graph indicating the items completed by the Scrum Team.
+  \item A measure of the remaining Sprint Backlog across the time of the Sprint plan.
+  \item The last item remaining to be completed on the Sprint Backlog.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{For a one month Sprint, how much time should be dedicated for the Sprint Planning Activity?}
+\begin{enumerate}[A)]
+  \item 8 hours.
+  \item Whatever time is needed.
+  \item 1 Month.
+  \item 4 hours.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{The purpose of the Sprint Retrospective is to review the following items}
+\begin{enumerate}[A)]
+  \item Review the remaining Product Backlog.
+  \item Review how the last Sprint went in terms of people, process, tools.
+  \item Review only things that went well.
+  \item Review the ScrumMaster contributions to the Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{Which statement best describes the Sprint Review?}
+\begin{enumerate}[A)]
+  \item It is use to build Team spirit.
+  \item It is a time allocated to judge the validity of the project.
+  \item It gives stakeholders an opportunity to inspect the product increments and progress to date, and to provide feedback.
+  \item It is a review of the Team's activities during the Sprint.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{What is the ultimate goal of the Scrum Team?}
+\begin{enumerate}[A)]
+  \item To complete the Product Backlog.
+  \item To estimate Sprint Backlog items.
+  \item To deliver increments of product functionality every Sprint.
+  \item To prioritize Sprint Backlog items.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{Which statement is an incorrect assessment of the Product Owner?}
+\begin{enumerate}[A)]
+  \item The Product Owner plays a dual role, Product Owner and Scrum Master.
+  \item The Product Owner is the only person responsible for the Product Backlog.
+  \item The Product Owner prioritizes the Product Backlog
+  \item The Product Owner is one person not a committee.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{How much work must a Scrum Team do to a Product Backlog it selects for a Sprint?}
+\begin{enumerate}[A)]
+  \item As much work as the Team can fit into a Sprint.
+  \item All of the analysis, design, development, testing and documentation work.
+  \item The best amount of work the Team can do given that is usually impossible for QA to finish all of the testing that is needed to prove it can be shipped.
+  \item As much work as it has told the Product Owner will be done for every Product Backlog item it selects.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{The Scrum Team is most productive if it is not interrupted during a Sprint. As a result of...}
+\begin{enumerate}[A)]
+  \item The Spring Backlog emerges to reflect the work to develop the committed Product Backlog items.
+  \item The Spring Backlog can only change with approval from the product owner.
+  \item The Sprint Backlog is devised during the Sprint Planning and should not need changing thereafter.
+  \item The Sprint Backlog is never changed.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{What is the unit of measure that is used by the Scrum Team in estimating Product Backlog items?}
+\begin{enumerate}[A)]
+  \item Minutes.
+  \item Hours.
+  \item Days.
+  \item Initial estimating is relative to each item in the Product Backlog.
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{What best describes the Scrum Team Characteristics?}
+\begin{enumerate}[A)]
+  \item Less than ten members, Cross Functional Team, Collocated, and Committed to the Sprint Goal.
+  \item Developers and Testers working together to deliver functional components.
+  \item Developers disperse across countries, working together as a team to deliver simple easy Product Backlog items first.
+  \item Customer, Stakeholders, Developers, Architects, Testers, Management, Designers, all thrown together to do whatever it takes to get the job done.
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{What part of the Sprint Backlog is used for the Sprint burndown chart?}
+\begin{enumerate}[A)]
+  \item The percentage of work completed by each Team member.
+  \item The number of Product Backlog items completed by all the Team members.
+  \item The actual time spent on each task by each team member.
+  \item The remaining time required to complete each task by each team member.
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{The Sprint Backlog is owned by?}
+\begin{enumerate}[A)]
+  \item The ScrumMaster.
+  \item The Product Owner.
+  \item The Stakeholders.
+  \item The Scrum Team.
+\end{enumerate}
+
+
+\textbf{Solution}: D
+
+
+\subsection{Who determines when it is appropriate to update the Sprint Backlog during the Sprint?}
+\begin{enumerate}[A)]
+  \item The Team.
+  \item The Scrum Master.
+  \item The Product Owner.
+  \item The Scrum Team.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{When multiple teams work together on the same product, each team should maintain a separate Product Backlog.}
+\begin{enumerate}[A)]
+  \item True
+  \item False
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{The purpose of a Sprint is to produce a done increment of working product.}
+\begin{enumerate}[A)]
+  \item True
+  \item False
+\end{enumerate}
+
+
+\textbf{Solution}: A
+
+
+\subsection{The time-box for the Sprint Planning meeting is?}
+\begin{enumerate}[A)]
+  \item 4 hours.
+  \item Monthly.
+  \item 8 hours for a monthly Sprint. For shorter Sprints it is usually shorter.
+  \item Whenever it is done.
+\end{enumerate}
+
+
+\textbf{Solution}: C
+
+
+\subsection{It is mandatory that the product increment be released to production at the end of each Sprint.}
+
+
+\begin{enumerate}[A)]
+  \item True
+  \item False
+\end{enumerate}
+
+
+\textbf{Solution}: B
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\subsection{}
+
+
+\begin{enumerate}[A)]
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
+
+
+\textbf{Solution}:
+
+
+\section{Unsorted}
+\begin{itemize}
+  \item \textbf{Planning}: In Agile Planning changes from thinking about how to schedule making
+    things we think we can have into \textbf{discovering} and \textbf{creating} the truly
+    meaningful things we never dreamed we could have.
+
+    Its about doing, deploying, discovering and steering and doing this over and over in a
+    sustainable collaborative manner
+  \item bf
+  \item bf
+\end{itemize}
+\section{Workshop Ideen}
+\begin{enumerate}
+  \item Erwartungen an den Workshop klären (Alle)
+  \item Einteilung zwischen Neulingen und Experten (ist gut geeignet um sich ein entsprechendes
+    Bild von der Gruppe zu machen) (Alle)
+  \item \textbf{Agiles Manifest} klären was das ist und die einzelnen Punkte sortieren (die
+    Punkt wurden jeweils als entsprechende Aussagen ausgelegt und die Kursteilnehmer mussten
+    sich einigen welches Aussagen zusammenpassen) (Alle)
+  \item \textbf{Artefakte}: Gruppe findet Begriffe und muss diese den entsprechenden Artefakten
+    zuordnen
+\end{enumerate}
+\pagebreak
+
+\end{document}
+
