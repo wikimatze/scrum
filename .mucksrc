@@ -1,0 +1,19 @@
+#
+# scrum
+#
+mux: tmux
+name: scrum
+dir: ~/ownCloud/latex/projekte/scrum
+
+
+[main]
+vim scrum.tex
+
+[pdf]
+pdflatex scrum.tex && zathura scrum.pdf &
+
+
+[tmp]
+tmux select-window -t main
+tmux kill-window -t tmp
+
